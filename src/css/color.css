@@ -1,0 +1,14 @@
+:root {
+  --common-color: #fafafa;
+  --common-bg: #1c1d20;
+  --common-border-hover: rgba(250, 250, 250, 0.2);
+  --common-border-color: rgba(250, 250, 250, 0.5);
+  --common-bg-btn-color: #ed3b44;
+  --common-bg-btn-color-hover: #e0373f;
+  --common-succes-color: #3cbc81;
+  --common-error-color: #e74a3b;
+  --common-placholder-color: rgba(250, 250, 250, 0.6);
+  --common-text-color: rgba(250, 250, 250, 0.4);
+  --common-benefits-dg-color: #242527;
+  --project-border-color: rgba(28, 29, 32, 0.2);
+}
