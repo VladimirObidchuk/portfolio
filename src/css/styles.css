@@ -8,7 +8,6 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./color.css');
 
 /* Sections style */
 @import url('./header.css');
@@ -20,4 +19,3 @@
 @import url('./covers.css');
 @import url('./review.css');
 @import url('./work.css');
-@import url('./footer.css');
