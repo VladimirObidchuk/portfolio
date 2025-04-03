@@ -22,9 +22,7 @@ body {
 main {
   flex-grow: 1;
 }
-main:has(.back-link) {
-  text-align: center;
-}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
