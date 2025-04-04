@@ -1,10 +1,13 @@
-
+* {
+    box-sizing: border-box;
+  }
 
   .review{
     padding-top: 64px;
     padding-bottom: 64px;
-            
-      }
+    box-sizing: border-box;
+}       
+      
     
     /* Styles for Tablet devices */
     @media only screen and (min-width: 768px) {
@@ -40,8 +43,9 @@ color: rgba(250, 250, 250, 0.4);
   /* Контейнер слайдера */
 .swiper {
     height: 386px;
+   
     
-    
+    overflow: hidden;
     position: relative; 
     
 }
@@ -67,8 +71,10 @@ color: rgba(250, 250, 250, 0.4);
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
     padding: 32px 24px;
-    
+    max-width: 344px;
     height: 302px;
+
+   
     
 }
 
@@ -88,7 +94,7 @@ color: rgba(250, 250, 250, 0.4);
     margin-bottom: 32px;
     }
 
-    .reviev-author { 
+    .review-author { 
 font-weight: 600;
 font-size: 20px;
 line-height: 150%;
@@ -138,12 +144,14 @@ display: flex;
 /* Контейнер для кнопок (располагаем внизу слайдера) */
 .buttons-div {
     position: absolute;
-    bottom: -50px; 
+    bottom: 0px; 
     left: 50%;
-    width: 156px;
+    transform: translateX(-50%);
+    width: 116px;
     display: flex;
     justify-content: center;
     gap: 12px;
+    z-index: 10;
    
 }
 
@@ -152,7 +160,7 @@ display: flex;
     .buttons-div {
        
         gap: 20px;
-       
+        width: 156px;
     }
   }
 

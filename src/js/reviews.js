@@ -16,7 +16,7 @@ import Swiper from 'swiper/bundle';
 
 // import 'swiper/css';
 // import 'swiper/css/navigation';
-const swiper = new Swiper();
+// const swiper = new Swiper();
 
 
 // document.addEventListener("DOMContentLoaded", function () {
