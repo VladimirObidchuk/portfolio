@@ -1,0 +1,170 @@
+.faq-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--common-text-color);
+  padding-bottom: 32px;
+}
+.ac {
+  padding-top: 20px;
+}
+#ac-0,
+#ac-1,
+#ac-2,
+#ac-3,
+#ac-4,
+#ac-5 {
+  --color-white: transparent;
+  --color-black: var(--common-color);
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-color: var(--common-border-hover);
+  margin-bottom: 24px;
+}
+#ac-0 {
+  border-top-width: 0;
+}
+.accordion-container {
+  border-top-width: 1px;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--common-border-hover);
+  border-left: transparent;
+  border-right: transparent;
+}
+#ac-trigger-0,
+#ac-trigger-1,
+#ac-trigger-2,
+#ac-trigger-3,
+#ac-trigger-4,
+#ac-trigger-5 {
+  font-family: 'Inter Tight', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fafafa;
+  padding: 0;
+  padding-right: 65px;
+}
+#ac-trigger-0::after,
+#ac-trigger-1::after,
+#ac-trigger-2::after,
+#ac-trigger-3::after,
+#ac-trigger-4::after,
+#ac-trigger-5::after {
+  content: '\276E';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+  border: 1px solid var(--common-border-hover);
+  border-radius: 100px;
+  padding: 7px;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 0;
+  transition: transform 400ms ease-out;
+}
+#ac-0.is-active > .ac-header #ac-trigger-0::after,
+#ac-1.is-active > .ac-header #ac-trigger-1::after,
+#ac-2.is-active > .ac-header #ac-trigger-2::after,
+#ac-3.is-active > .ac-header #ac-trigger-3::after,
+#ac-4.is-active > .ac-header #ac-trigger-4::after,
+#ac-5.is-active > .ac-header #ac-trigger-5::after {
+  transform: rotate(270deg);
+}
+#ac-text-0,
+#ac-text-1,
+#ac-text-2,
+#ac-text-3,
+#ac-text-4,
+#ac-text-5 {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--common-placholder-color);
+  padding: 0;
+  padding-top: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ac {
+    padding-top: 32px;
+  }
+  #ac-0,
+  #ac-1,
+  #ac-2,
+  #ac-3,
+  #ac-4,
+  #ac-5 {
+    margin-bottom: 42px;
+  }
+  #ac-text-0,
+  #ac-text-1,
+  #ac-text-2,
+  #ac-text-3,
+  #ac-text-4,
+  #ac-text-5 {
+    padding-top: 26px;
+  }
+  #ac-trigger-0::after,
+  #ac-trigger-1::after,
+  #ac-trigger-2::after,
+  #ac-trigger-3::after,
+  #ac-trigger-4::after,
+  #ac-trigger-5::after {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  #ac-text-0,
+  #ac-text-1,
+  #ac-text-2,
+  #ac-text-3,
+  #ac-text-4,
+  #ac-text-5 {
+    width: 94%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .accordion-container {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .accordion-container::after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: var(--common-border-hover);
+    z-index: 99;
+    right: 48%;
+    top: 0;
+  }
+  #ac-1 {
+    border-top-width: 0;
+  }
+  #ac-trigger-1,
+  #ac-text-1,
+  #ac-trigger-3,
+  #ac-text-3,
+  #ac-trigger-5,
+  #ac-text-5 {
+    padding-left: 64px;
+  }
+  #ac-text-0,
+  #ac-text-1,
+  #ac-text-2,
+  #ac-text-3,
+  #ac-text-4,
+  #ac-text-5 {
+    width: 85%;
+  }
+}
