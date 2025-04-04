@@ -1,20 +1,57 @@
-.review{
-    padding-top: 164px;
-    padding-bottom: 164px;
-    padding-left: 32px;
-    padding-right: 32px;
-}
 
 
+  .review{
+    padding-top: 64px;
+    padding-bottom: 64px;
+            
+      }
+    
+    /* Styles for Tablet devices */
+    @media only screen and (min-width: 768px) {
+        .review {
+         
+            padding-top: 96px;
+            padding-bottom: 96px;
+            
+        }
+      }
+      /* Styles for Desktop devices */
+      @media only screen and (min-width: 1440px) {
+        .review {
+            padding-top: 164px;
+            padding-bottom: 164px;
+           
+          
+        }
+      }
+
+  .review-title {
+font-family: "Inter Tight", sans-serif;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: rgba(250, 250, 250, 0.4);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
 
 
-/* Контейнер слайдера */
+  /* Контейнер слайдера */
 .swiper {
-    height: 402px;
-    /* margin: 0 auto; */
+    height: 386px;
+    
+    
     position: relative; 
-    /* overflow-y: hidden;  */
+    
 }
+@media only screen and (min-width: 768px) {
+    .swiper {
+     height: 402px;
+        
+    }
+  }
+
 
 /* Стили для элементов списка слайдов */
 .swiper-wrapper {
@@ -22,7 +59,7 @@
     display: flex;
     padding: 0;
     margin: 0;
-    gap: 16px;
+    
 }
 
 /* Стили для каждого слайда */
@@ -30,11 +67,73 @@
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
     padding: 32px 24px;
-    min-width: 332px;
+    
     height: 302px;
+    
 }
 
+@media only screen and (min-width: 1440px) {
+        .swiper-slide {
+            
+           max-width: 332px;
+           
+        }
+      }
+.review-img {
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    background-color: #e0e0e0;
 
+    margin-bottom: 32px;
+    }
+
+    .reviev-author { 
+font-weight: 600;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: #fafafa;
+
+    }
+
+.review-text {
+       
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: rgba(250, 250, 250, 0.6);
+min-width: 295px;
+margin-top: 8px;
+
+    }
+  
+    
+
+      @media only screen and (min-width: 1440px) {
+        .review-text {
+            min-width: 284px;
+           
+        }
+      }
+
+.not-found-alert{
+font-weight: 600;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: #fafafa;
+display: flex;
+    justify-content: center; 
+    align-items: center;
+
+
+
+}
+.visually-hidden{
+    display: none;
+}
 
 /* Контейнер для кнопок (располагаем внизу слайдера) */
 .buttons-div {
@@ -44,19 +143,43 @@
     width: 156px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    /* z-index: 10; */
+    gap: 12px;
+   
 }
+
+
+@media only screen and (min-width: 768px) {
+    .buttons-div {
+       
+        gap: 20px;
+       
+    }
+  }
+
+
 
 /* Стили для кнопок */
 .swiper-button-prev,
 .swiper-button-next {
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
-    padding: 18px;
-    width: 68px;
-    height: 68px;
+    padding: 14px;
+    width: 52px;
+    height: 52px;
     cursor: pointer;
+    
     
 }
 
+@media only screen and (min-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      
+        padding: 18px;
+        width: 68px;
+        height: 68px;
+        
+      
+        
+    }
+  }
