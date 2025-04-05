@@ -11,6 +11,7 @@
 @import url('./color.css');
 
 /* Sections style */
+@import url('./modalwindow.css');
 @import url('./header.css');
 @import url('./hero.css');
 @import url('./about.css');
