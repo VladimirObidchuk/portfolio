@@ -7,7 +7,9 @@ export async function getAllReviews() {
     return res.data;
   } catch (error) {
     console.error('Error:', error.status);
-    return error.status;
+    throw error;
+    // return error.status;
+    
   }
 }
 

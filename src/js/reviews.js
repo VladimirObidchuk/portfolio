@@ -1,68 +1,103 @@
 export function review(params) {}
 export default review;
 
+import {getAllReviews} from "./reviewe-api.js"
 
+import sprite from '../img/icon.svg';
 
 // import Swiper from 'swiper';
 // import 'swiper/css';
 // import Swiper bundle with all modules installed
+
 import Swiper from 'swiper/bundle';
 
-// // import styles bundle
-// import 'swiper/css/bundle';
-// import 'swiper/css/keyboard';
 
-// init Swiper:
+const reviewContainer = document.querySelector('.review-container');
 
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// const swiper = new Swiper();
+const emptyRender=()=>{
+  reviewContainer.insertAdjacentHTML('beforeend', '<p class="not-found-alert"> No information found</p>');
+}
+
+const reviewsRender=(data)=>{
+
+  const cardsMarkup=data.map(review=>{
+    return `<li class="swiper-slide">
+          <img class="review-img" src="${review.avatar_url}" alt="">
+          <h4 class="review-author">${review.author}</h4>
+          <p class="review-text">${review.review}</p>
+        </li>`
+  }).join('');
 
 
-// document.addEventListener("DOMContentLoaded", function () {
+  const fullMarkup=`<div class="swiper mySwiper">
+      <ul class="swiper-wrapper">${cardsMarkup}</ul>
+    <div class="buttons-div">
+      <button class="swiper-button-prev">
+        <svg class="review-icon">
+        <use href="${sprite}#icon-arrow-narrow-left"></use>
+      </svg>
+    </button>
+      <button class="swiper-button-next">
+        <svg class="review-icon">
+        <use href="${sprite}#icon-arrow-narrow-right"></use>
+      </svg>
+    </button>
+    </div>`
+
+    reviewContainer.insertAdjacentHTML('beforeend', fullMarkup);
+
     new Swiper(".mySwiper", {
-        // slidesPerView: "auto",
-        slidesPerView: 4,
-         // Показывать 1 карточку за раз
-        spaceBetween: 16,
-        // centeredSlides: false,
-        
-        // Отступ между карточками
-        // loop: true, 
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+      
+      // slidesPerView: 4,
+       
+      spaceBetween: 16,
+      
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+                
+                1440: {
+                  slidesPerView: 4,
+                },
+                
+                768: {
+                  slidesPerView: 2,
+                },
+                
+                0: {
+                  slidesPerView: 1, 
+                },
+              }
+  });
+
+}
 
 
-        breakpoints: {
-                  // Когда ширина экрана >= 1024px
-                  1440: {
-                    slidesPerView: 4, // показывать 3 слайда
-                  },
-                  // Когда ширина экрана >= 768px
-                  768: {
-                    slidesPerView: 2, // показывать 2 слайда
-                  },
-                  // Когда ширина экрана < 768px
-                  0: {
-                    slidesPerView: 1, // показывать 1 слайд
-                  },
-                }
-        // breakpoints: {
+getAllReviews()
+  .then(data => {
+    reviewsRender(data);
+    //добавляйте функціонал для рендеренгу
+    console.log(data);
+  })
+  .catch((error) => {
+    emptyRender();
 
-        //     320: {
-        //         slidesPerView: 1,
-        //       },
-        //     768: {
-        //         slidesPerView: 2, // На планшетах 2 картки
-        //     },
-            
-        //     1440: {
-        //         slidesPerView: 4, // На десктопі теж 3 картки
-        //     }
-        // }
-    });
-// });
+    const scrollHandler = function() {
+      const rect = reviewContainer.getBoundingClientRect();
+    
+      // Если верхняя часть секции видна на экране (появляется в области видимости)
+      if (rect.top >= 0 && rect.top <= window.innerHeight) {
 
-  
+        // здесь должно быть что-то типа Toaster
+        console.log("Error:", error.message);
+    
+        // Снимаем слушатель после того, как он сработал
+        window.removeEventListener('scroll', scrollHandler);
+      }
+    };
+
+    window.addEventListener('scroll', scrollHandler);
+  });
