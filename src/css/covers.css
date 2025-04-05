@@ -1,0 +1,58 @@
+.covers {
+  padding: 64px 0;
+  position: relative;
+}
+.covers-container {
+}
+.marquee {
+  height: 508px;
+  background: url('../img/bg-line-cover.png') left top no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -800px;
+  left: 0;
+  overflow: hidden;
+}
+
+.marquee__inner {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  transform: rotate(16deg);
+  margin-bottom: 24px;
+}
+
+.marquee__line {
+  flex-shrink: 0;
+  margin-right: 10px;
+  width: 252px;
+  height: 162px;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .marquee {
+    height: 960px;
+  }
+  .marquee__inner {
+    gap: 44px;
+    margin-bottom: 44px;
+  }
+  .marquee__line {
+    width: 544px;
+    height: 314px;
+  }
+}
