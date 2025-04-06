@@ -56,7 +56,7 @@
 #ac-trigger-3::after,
 #ac-trigger-4::after,
 #ac-trigger-5::after {
-  content: '\276E';
+  content: '\276F';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +67,7 @@
   width: 20px;
   height: 20px;
   right: 0;
-  top: 0;
+  top: -5px;
   transition: transform 400ms ease-out;
 }
 #ac-0.is-active > .ac-header #ac-trigger-0::after,
