@@ -112,7 +112,15 @@
   padding: 18px;
   width: 68px;
   height: 68px;
-  background-color: inherit;
+  background-color: var(--common-bg);
+
+  stroke: white;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
 }
 
 @media only screen and (min-width: 768px) {
