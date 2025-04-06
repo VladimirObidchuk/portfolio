@@ -1,0 +1,105 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #ed3b44 0%,
+    #69292d 32.27%,
+    #1c1d20 50.32%
+  );
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+}
+
+@media only screen and (min-width: 375px) {
+  .wrapper {
+    display: none;
+  }
+}
+
+.burger-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 0 0 64px;
+  justify-content: flex-end;
+}
+
+.wrapper.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.burger-btn-close {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.burger-svg-close {
+  stroke: var(--common-color);
+}
+
+.burger-svg-close:active {
+  stroke: var(--common-bg-btn-color-hover);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-nav {
+  margin: auto 0;
+}
+
+.burger-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.burger-item {
+  text-align: center;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.burger-item:hover {
+  color: var(--common-bg-btn-color);
+}
+.burger-item,
+.burger-btn-close,
+.burger-btn-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Не працює хз */
+/* .burger-item:focus {
+  color: var(--common-bg-btn-color-hover) !important;
+} */
+
+.burger-btn-link {
+  margin-bottom: 64px;
+  font-size: 14px;
+  border-radius: 60px;
+  padding: 14px 31px;
+  max-width: 164px;
+  background-color: var(--common-bg-btn-color);
+}
+
+.burger-btn-link:hover {
+  background-color: var(--common-bg-btn-color-hover);
+}
