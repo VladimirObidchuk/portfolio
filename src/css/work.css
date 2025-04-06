@@ -1,0 +1,251 @@
+.work {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 64px;
+  padding-bottom: 32px;
+  position: relative;
+  background-image: url(/src/img/work/Glass\ effect\ 2.png);
+}
+.work-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 63px;
+}
+.work-img {
+  border-radius: 12px;
+  width: 70px;
+  height: 70px;
+}
+.work-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+.work-span {
+  color: var(--common-bg-btn-color);
+}
+.span-together {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.work-contactform {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+.input-group {
+  flex-direction: column;
+  display: flex;
+  gap: 16px;
+}
+.form-input {
+  color: var(--common-color);
+  padding: 0 0 20px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  margin-bottom: 4px;
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+.send-button {
+  background-color: var(--common-bg-btn-color);
+  border: none;
+  padding: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  color: var(--common-color);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+.send-button:active {
+  background-color: var(--common-bg-btn-color-hover);
+}
+.work-address {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.work-address-list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 300px;
+}
+.adress-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: -0.02em;
+}
+.adress-link:focus {
+  border: 1px solid var(--common-color);
+}
+@media only screen and (min-width: 768px) {
+  .work {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 96px;
+    padding-bottom: 169px;
+    position: relative;
+  }
+  .work-hero {
+    gap: 10px;
+    margin-bottom: 64px;
+  }
+  .work-title {
+    font-size: 64px;
+    margin-top: 10px;
+  }
+  .span-together {
+    font-size: 64px;
+  }
+  .work-contactform {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 78px;
+    justify-content: flex-start;
+  }
+  .input-group {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+  }
+  .form-input {
+    width: 186px;
+  }
+  .send-button {
+    height: 150px;
+    width: 150px;
+  }
+  .work-address {
+    gap: 8px;
+    min-width: 418px;
+  }
+
+  .adress-link {
+    padding: 18px 32px;
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .work {
+    padding-left: 196px;
+    padding-right: 196px;
+    padding-top: 164px;
+    padding-bottom: 169px;
+    position: relative;
+    display: flex;
+  }
+  .work-hero {
+    max-width: 542px;
+  }
+  .work-contactform {
+    gap: 86px;
+  }
+  .form-input {
+    width: 350px;
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-backdrop.hidden {
+  display: none;
+}
+
+.modal-window {
+  background-color: var(--common-bg);
+  color: var(--common-color);
+  padding: 64px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 343px;
+  margin: 10vh auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  /* margin: 138px 16px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .modal-window {
+    /* margin: 195px 138px;
+    width: 492px;
+    height: 246px; */
+    width: 70%;
+    max-width: 492px;
+    height: auto;
+    margin: 15vh auto;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .modal-window {
+    /* margin: 195px 474px; */
+    width: 50%;
+    max-width: 492px;
+  }
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.modal-desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
