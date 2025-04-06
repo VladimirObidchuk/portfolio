@@ -92,11 +92,6 @@
   margin: 0 auto;
 }
 
-/* .swiper-slide {
-  width: auto;
-  flex-shrink: 0;
-} */
-
 .swipe-btn {
   display: flex;
   align-items: center;
@@ -126,7 +121,7 @@
   }
 
   .skill-text-block {
-    max-width: 312px;
+    max-width: none;
     flex-wrap: nowrap;
     margin-bottom: 164px;
   }
