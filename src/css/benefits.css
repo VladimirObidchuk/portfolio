@@ -1,0 +1,131 @@
+.benefits-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 40px;
+}
+
+.benefits-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .benefits-title {
+    flex-basis: 50%;
+    margin-right: auto;
+    padding-top: 12px;
+  }
+
+  .benefits-box {
+    flex-basis: 50%;
+    align-items: flex-start;
+  }
+}
+
+/* Список карток */
+.benefits-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.benefits-item {
+  background-color: #2a2a2a;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+  transition: transform 250ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  outline: none;
+  cursor: default;
+}
+
+@media (min-width: 1440px) {
+  .benefits-item:hover,
+  .benefits-item:focus {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Іконковий блок */
+.benefits-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 1.5px;
+  fill: none;
+}
+
+.benefits-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ed3b44;
+  border-radius: 8px;
+  margin-bottom: 64px;
+}
+
+/* Заголовок */
+.benefits-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Опис */
+.benefits-item-descr {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Кнопка */
+.benefits-button {
+  display: inline-block;
+  margin-top: 64px;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 250ms, border-color 250ms;
+  outline: none;
+}
+
+@media (min-width: 1440px) {
+  .benefits-button:hover,
+  .benefits-button:focus {
+    background-color: rgba(237, 59, 68, 0.1);
+    border-color: #ed3b44;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.benefits-button:active {
+  background-color: #ed3b44;
+  color: #fff;
+  border-color: #ed3b44;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
