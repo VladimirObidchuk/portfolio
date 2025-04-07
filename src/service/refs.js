@@ -15,7 +15,7 @@ const refs = {
   modal: document.querySelector('[data-modal]'),
 
   //-----------reviews------------//
-  reviewContainer: document.querySelector('.review-wrapper'),
+  reviewContainer: document.querySelector('.review-container'),
   //------------work----------------------//
   form: document.getElementById('work-contactform'),
   emailInput: document.getElementById('email'),
