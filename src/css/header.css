@@ -33,6 +33,12 @@
   color: var(--common-color);
 }
 
+.box-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media only screen and (min-width: 768px) {
   .nav-menu-btn {
     display: block;
@@ -69,21 +75,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  position: fixed;
-  top: 86px;
   gap: 10px;
 }
 
 .hidden {
   display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .nav-list {
-    left: 50%;
-    transform: translate(-41%, 0);
-  }
 }
 
 .burger-btn {
