@@ -4,7 +4,7 @@ refs.menuBtn.addEventListener('click', handleOnClick);
 refs.listLink.addEventListener('click', handleRemoveClick);
 
 function handleOnClick() {
-  refs.listLink.classList.remove('hidden');
+  refs.listLink.classList.toggle('hidden');
 }
 
 function handleRemoveClick() {

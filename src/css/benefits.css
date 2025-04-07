@@ -12,11 +12,11 @@
 }
 
 @media (min-width: 1440px) {
-  .container {
+  /* .container {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-  }
+  } */
 
   .benefits-title {
     flex-basis: 50%;

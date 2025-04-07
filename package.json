@@ -17,6 +17,7 @@
   "author": "GP-JS-5",
   "license": "ISC",
   "dependencies": {
+    "accordion": "^3.0.2",
     "accordion-js": "^3.4.0",
     "axios": "^1.8.4",
     "swiper": "^11.2.6",

@@ -1,223 +1,176 @@
 * {
-    box-sizing: border-box;
-  }
-
-
-
-  .review{
-    padding-top: 64px;
-    padding-bottom: 64px;
-    box-sizing: border-box;
-}       
-      
-    
-    /* Styles for Tablet devices */
-    @media only screen and (min-width: 768px) {
-        .review {
-         
-            padding-top: 96px;
-            padding-bottom: 96px;
-            
-        }
-      }
-      /* Styles for Desktop devices */
-      @media only screen and (min-width: 1440px) {
-        .review {
-            padding-top: 164px;
-            padding-bottom: 164px;
-           
-          
-        }
-      }
-
-  .review-title {
-font-family: "Inter Tight", sans-serif;
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: -0.02em;
-color: rgba(250, 250, 250, 0.4);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-  }
-
-
-  /* Контейнер слайдера */
-  #review .swiper-review {
-    /* height: 386px; */
-   /* padding-bottom: 100px; */
-    position: unset;
-    overflow: hidden;
-    /* position: relative;  */
-    
+  box-sizing: border-box;
 }
-/* @media only screen and (min-width: 768px) {
-    .swiper {
-     
-        
-    }
-  } */
 
+.review {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  box-sizing: border-box;
+}
 
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .review {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .review {
+    padding-top: 164px;
+    padding-bottom: 164px;
+  }
+}
+
+.review-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+/* Контейнер слайдера */
+#review .swiper-review {
+  position: unset;
+  overflow: hidden;
+}
 /* Стили для элементов списка слайдов */
 #review .swiper-wrapper-review {
-    height: 350px;
-    display: flex;
-    padding: 0;
-    margin-bottom: 32px;
-    
+  height: 350px;
+  display: flex;
+  padding: 0;
+  margin-bottom: 32px;
 }
 
 /* Стили для каждого слайда */
 #review .swiper-slide-review {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 20px;
-    padding: 32px 24px;
-    max-width: 344px;
-    height: 350px;
-
-   
-    
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  max-width: 344px;
+  height: 350px;
 }
 
 @media only screen and (min-width: 1440px) {
-    #review .swiper-slide-review {
-            
-           max-width: 332px;
-           
-        }
-      }
+  #review .swiper-slide-review {
+    max-width: 332px;
+  }
+}
 .review-img {
-    border-radius: 10px;
-    width: 48px;
-    height: 48px;
-    background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: #e0e0e0;
 
-    margin-bottom: 32px;
-    }
+  margin-bottom: 32px;
+}
 
-    .review-author { 
-font-weight: 600;
-font-size: 20px;
-line-height: 150%;
-letter-spacing: -0.02em;
-color: #fafafa;
-
-    }
+.review-author {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
 
 .review-text {
-       
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: -0.02em;
-color: rgba(250, 250, 250, 0.6);
-min-width: 295px;
-margin-top: 8px;
-/* height: 120px;
-overflow: auto; */
-
-    }
-  
-    
-
-      @media only screen and (min-width: 1440px) {
-        .review-text {
-            min-width: 284px;
-           
-        }
-      }
-
-.not-found-alert{
-font-weight: 600;
-font-size: 20px;
-line-height: 150%;
-letter-spacing: -0.02em;
-color: #fafafa;
-display: flex;
-    justify-content: center; 
-    align-items: center;
-
-
-
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  margin-top: 8px;
 }
-.visually-hidden{
-    display: none;
+
+@media only screen and (min-width: 1440px) {
+  .review-text {
+    min-width: 284px;
+  }
+}
+
+.not-found-alert {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visually-hidden {
+  display: none;
 }
 
 /* Контейнер для кнопок (располагаем внизу слайдера) */
 .buttons-div {
-    /* position: absolute; */
-    /* bottom: 0px; 
+  /* position: absolute; */
+  /* bottom: 0px; 
     left: 50%; */
-    /* transform: translateX(-50%); */
-    width: 116px;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    /* z-index: 10; */
-    margin-left: auto;
-    margin-right: auto;
-    
-   
+  /* transform: translateX(-50%); */
+  width: 116px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  /* z-index: 10; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
+@media only screen and (min-width: 768px) {
+  .buttons-div {
+    gap: 20px;
+    width: 156px;
+  }
+}
+
+#review .review-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #fafafa;
+  fill: none;
+}
 
 @media only screen and (min-width: 768px) {
-    .buttons-div {
-       
-        gap: 20px;
-        width: 156px;
-    }
+  #review .review-icon {
+    width: 32px;
+    height: 32px;
   }
-
-  #review .review-icon{
-    width: 24px;
-    height: 24px;
-    stroke:#FAFAFA;
-    fill:none;
-  }
-
-  @media only screen and (min-width: 768px) {
-    #review .review-icon{
-        width: 32px;
-        height: 32px;
-      }
-  }
+}
 
 /* Стили для кнопок */
 #review .swiper-button-prev-review,
 #review .swiper-button-next-review {
-    position:unset;
-    margin-top:unset;
-    /* display:block; */
-    border: 1px solid rgba(250, 250, 250, 0.5);
-    border-radius: 60px;
-    padding: 14px;
-    width: 52px;
-    height: 52px;
-    cursor: pointer;
-    background-color: inherit;
-    
+  position: unset;
+  margin-top: unset;
+  /* display:block; */
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  background-color: inherit;
 }
 
-#review .swiper-button-disabled{
-    border: 1px solid rgba(250, 250, 250, 0.2);
+#review .swiper-button-disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-#review .swiper-button-disabled .review-icon{
-    stroke:#3B3B3B;
-    
+#review .swiper-button-disabled .review-icon {
+  stroke: #3b3b3b;
 }
 
 @media only screen and (min-width: 768px) {
-    #review .swiper-button-prev-review,
-    #review .swiper-button-next-review {
-      
-        padding: 18px;
-        width: 68px;
-        height: 68px;
-          
-    }
+  #review .swiper-button-prev-review,
+  #review .swiper-button-next-review {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
   }
-
+}

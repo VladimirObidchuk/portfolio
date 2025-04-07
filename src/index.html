@@ -20,19 +20,22 @@
       home-path="index.html"
       icon-path="img/icon.svg"
     />
+
     <!-- для всіх передаю шлях до картинок в змінній. Використовувати в своїй секціі в
     самому шляху {=$icon-path} або {=$img-path} і дописувати назву картинки або
     #ідентифікатор для icon -->
 
     <main>
       <load src="./partials/hero.html" />
-      <load src="./partials/about.html" img-path="img/about/" />
-      <load src="./partials/benefits.html" icon-path="img/icon.svg" />
+
+      <load src="./partials/about.html" img-path="/img/about/" />
+      <load src="./partials/benefits.html" icon-path="./img/icon.svg" />
       <load
         src="./partials/projects.html"
         img-path="img/project/"
         icon-path="img/icon.svg"
       />
+
       <load src="./partials/faq.htm" />
       <load src="./partials/covers.htm" img-path="img/covers/" />
       <load src="./partials/review.html" icon-path="img/icon.svg" />

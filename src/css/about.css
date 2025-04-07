@@ -1,0 +1,233 @@
+.about {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.about-description {
+  margin-bottom: 32px;
+}
+
+.description-text {
+  background-color: var(--common-benefits-dg-color);
+  border-radius: 24px;
+  padding: 32px 32px 272px 32px;
+  margin-bottom: 16px;
+}
+
+.about-text {
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  min-height: 196px;
+}
+
+.about-text-functional {
+  color: var(--common-bg-btn-color);
+}
+
+.about-text-website {
+  color: var(--common-text-color);
+}
+
+.about-img {
+  border-radius: 24px;
+  margin-bottom: 32px;
+}
+
+.about-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-accordion .ac {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px rgba(250, 250, 250, 0.2) solid;
+  padding-bottom: 20px;
+}
+
+.about-accordion .ac-trigger {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  height: 68px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-accordion .ac-panel .ac-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+.about-accordion .ac .ac-trigger::after {
+  content: '\276F';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+  border: 1px solid var(--common-border-hover);
+  border-radius: 100px;
+  padding: 9px;
+  width: 36px;
+  height: 36px;
+  top: 0px;
+  transition: transform 400ms ease-out;
+}
+
+.about-accordion .ac.is-active > .ac-header .ac-trigger::after {
+  content: '\276F';
+  transform: rotate(270deg);
+}
+
+.swiper-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 375px;
+  margin-top: 32px;
+}
+
+.about-swiper {
+  width: 260px;
+  max-width: 100%;
+  margin-left: 0;
+  position: relative;
+  margin-right: auto;
+}
+
+.about-wrapper {
+  align-items: center;
+}
+
+.about-slide {
+  width: 130px !important;
+  height: 130px;
+  border: 1px rgba(250, 250, 250, 0.2) solid;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.swiper-slide-active {
+  background-color: var(--common-bg-btn-color);
+}
+
+.skill-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.swiper-button-next {
+  width: 28px;
+  height: 28px;
+  position: static;
+  color: #3b3b3b;
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    padding-bottom: 48px;
+  }
+
+  .description-text {
+    padding: 64px 64px 436px 64px;
+  }
+
+  .about-decription {
+    margin-bottom: 64px;
+  }
+  .about-text {
+    font-size: 37px;
+    line-height: 1.05263;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .accordion-container .ac {
+    padding-bottom: 32px;
+  }
+
+  .accordion-container .ac .ac-trigger::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-container {
+    max-width: 768px;
+  }
+
+  .swiper {
+    width: 600px;
+  }
+
+  .swiper-slide {
+    width: 200px !important;
+    height: 200px;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about {
+    padding-top: 48px;
+    padding-bottom: 82px;
+    display: flex;
+  }
+
+  .about-description {
+    margin-bottom: 96px;
+    display: flex;
+    gap: 16px;
+  }
+
+  .about-text {
+    max-width: 552px;
+    font-size: 36px;
+    height: 200px;
+  }
+  .about-img {
+    margin-bottom: 0;
+  }
+
+  .accordion-container .ac .ac-panel .ac-text {
+    display: flex;
+    margin-left: 696px;
+    max-width: 612px;
+  }
+  .swiper-container {
+    max-width: 1440px;
+  }
+
+  .swiper {
+    width: 1200px;
+  }
+}

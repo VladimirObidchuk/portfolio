@@ -24,7 +24,9 @@ a {
 }
 
 button {
+  font-family: 'Inter Tight', sans-serif;
   cursor: pointer;
+  padding: 0;
 }
 
 img {

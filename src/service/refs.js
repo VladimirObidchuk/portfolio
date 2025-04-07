@@ -15,11 +15,12 @@ const refs = {
   modal: document.querySelector('[data-modal]'),
 
   //-----------reviews------------//
-  reviewContainer: document.querySelector('.review-container'),
+  reviewContainer: document.querySelector('.review-wrapper'),
   //------------work----------------------//
   form: document.getElementById('work-contactform'),
   emailInput: document.getElementById('email'),
   modalBackdrop: document.getElementById('modalBackdrop'),
   modalCloseBtn: document.getElementById('modalCloseBtn'),
+  comment: document.getElementById('comment'),
 };
 export default refs;
