@@ -1,12 +1,18 @@
 export function review(params) {}
 export default review;
 
-import {getAllReviews} from "./reviewe-api.js"
+
+import { getAllReviews } from './reviewe-api.js';
+
 
 import sprite from '../img/icon.svg';
 
 // import Swiper from 'swiper';
 // import 'swiper/css';
+
+import Swiper from 'swiper';
+import 'swiper/css';
+
 // import Swiper bundle with all modules installed
 
 
@@ -31,8 +37,11 @@ const reviewsRender=(data)=>{
   }).join('');
 
 
+  const fullMarkup = `<div class="mySwiper">
+      <ul class="swiper-wrapper">${cardsMarkup}</ul>
   const fullMarkup=`<div class="swiper mySwiper swiper-review">
       <ul class="swiper-wrapper swiper-wrapper-review">${cardsMarkup}</ul>
+
     <div class="buttons-div">
       <button class="swiper-button-prev swiper-button-prev-review">
         <svg class="review-icon">
