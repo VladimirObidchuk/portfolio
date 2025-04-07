@@ -2,5 +2,5 @@ import{A as c,a,S as d}from"./assets/vendor-BL1uRhRu.js";(function(){const r=doc
           <img class="review-img" src="${r.avatar_url}" alt="">
           <h4 class="review-author">${r.author}</h4>
           <p class="review-text">${r.review}</p>
-        </li>`).join("");w().then(t=>{n.reviewContainer.insertAdjacentHTML("beforeend",g(t)),console.log(t),new d(".mySwiper",{spaceBetween:16,autoHeight:!1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},breakpoints:{1440:{slidesPerView:4},768:{slidesPerView:2},0:{slidesPerView:1}}})}).catch(t=>{y();const r=function(){const i=reviewContainer.getBoundingClientRect();i.top>=0&&i.top<=window.innerHeight&&(console.log("Error:",t.message),window.removeEventListener("scroll",r))};window.addEventListener("scroll",r)});u();
+        </li>`).join("");w().then(t=>{n.reviewContainer.insertAdjacentHTML("beforeend",g(t)),console.log(t),new d(".review-swiper",{spaceBetween:16,autoHeight:!1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},breakpoints:{1440:{slidesPerView:4},768:{slidesPerView:2},0:{slidesPerView:1}}})}).catch(t=>{y();const r=function(){const i=reviewContainer.getBoundingClientRect();i.top>=0&&i.top<=window.innerHeight&&(console.log("Error:",t.message),window.removeEventListener("scroll",r))};window.addEventListener("scroll",r)});u();
 //# sourceMappingURL=index.js.map
