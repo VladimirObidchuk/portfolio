@@ -179,18 +179,6 @@
     max-width: 768px;
   }
 
-  .about-swiper {
-    width: 600px;
-  }
-
-  .sabout-slide {
-    width: 200px !important;
-    height: 200px;
-    font-size: 20px;
-    letter-spacing: -0.02em;
-  }
-}
-
 @media only screen and (min-width: 1440px) {
   .about {
     padding-top: 48px;
@@ -220,9 +208,5 @@
   }
   .about-container {
     max-width: 1440px;
-  }
-
-  .about-swiper {
-    width: 1200px;
   }
 }
