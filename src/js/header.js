@@ -1,13 +1,12 @@
-const menuBtn = document.querySelector('.js-menu');
-const listLink = document.querySelector('.nav-list');
+import refs from '../service/refs';
 
-menuBtn.addEventListener('click', handleOnClick);
-listLink.addEventListener('click', handleRemoveClick);
+refs.menuBtn.addEventListener('click', handleOnClick);
+refs.listLink.addEventListener('click', handleRemoveClick);
 
 function handleOnClick() {
-  listLink.classList.remove('hidden');
+  refs.listLink.classList.remove('hidden');
 }
 
 function handleRemoveClick() {
-  listLink.classList.add('hidden');
+  refs.listLink.classList.add('hidden');
 }

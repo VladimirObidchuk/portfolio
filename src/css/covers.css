@@ -1,17 +1,20 @@
 .covers {
   padding: 64px 0;
-  position: relative;
 }
 .covers-container {
+  position: relative;
+  height: 508px;
+  overflow: hidden;
 }
 .marquee {
-  height: 508px;
+  height: 100vh;
+  height: -moz-available;
+  height: -webkit-fill-available;
   background: url('../img/bg-line-cover.png') left top no-repeat;
   background-size: contain;
   position: absolute;
   right: -800px;
   left: 0;
-  overflow: hidden;
 }
 
 .marquee__inner {
@@ -44,7 +47,7 @@
   }
 }
 @media only screen and (min-width: 768px) {
-  .marquee {
+  .covers-container {
     height: 960px;
   }
   .marquee__inner {

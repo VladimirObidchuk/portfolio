@@ -1,4 +1,3 @@
-import axios from 'axios';
 import apiInstance from '../service/api.js';
 
 export async function getAllReviews() {
@@ -9,7 +8,6 @@ export async function getAllReviews() {
     console.error('Error:', error.status);
     throw error;
     // return error.status;
-    
   }
 }
 

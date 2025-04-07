@@ -1,11 +1,4 @@
-const refs = {
-  menuBtn: document.querySelector('.js-menu'),
-  openModalBtn: document.querySelector('[data-modal-open]'),
-  closeModalBtn: document.querySelector('[data-modal-close]'),
-  choiceSectionMenu: document.querySelectorAll('.burger-nav-link'),
-  orderBtnLink: document.querySelector('.burger-btn-link'),
-  modal: document.querySelector('[data-modal]'),
-};
+import refs from '../service/refs';
 
 refs.choiceSectionMenu.forEach(link => {
   link.addEventListener('click', toggleModal);

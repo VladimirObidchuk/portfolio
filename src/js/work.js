@@ -1,33 +1,28 @@
-export function work(params) {}
-export default work;
-const form = document.getElementById('work-contactform');
-const emailInput = document.getElementById('email');
-const modalBackdrop = document.getElementById('modalBackdrop');
-const modalCloseBtn = document.getElementById('modalCloseBtn');
+import refs from '../service/refs';
 
 const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
 function showModal() {
-  modalBackdrop.classList.remove('hidden');
+  refs.modalBackdrop.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
-  modalBackdrop.classList.add('hidden');
+  refs.modalBackdrop.classList.add('hidden');
   document.body.style.overflow = '';
 }
 
-modalCloseBtn.addEventListener('click', closeModal);
-modalBackdrop.addEventListener('click', e => {
-  if (e.target === modalBackdrop) closeModal();
+refs.modalCloseBtn.addEventListener('click', closeModal);
+refs.modalBackdrop.addEventListener('click', e => {
+  if (e.target === refs.modalBackdrop) closeModal();
 });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
 
-form.addEventListener('submit', async e => {
+refs.form.addEventListener('submit', async e => {
   e.preventDefault();
-  const email = emailInput.value.trim();
+  const email = refs.emailInput.value.trim();
   const comment = document.getElementById('comment').value.trim();
   if (!emailPattern.test(email)) {
     alert('Invalid email, try again');
@@ -42,7 +37,7 @@ form.addEventListener('submit', async e => {
 
     if (!response.ok) throw new Error('Failed request');
     showModal();
-    form.reset();
+    refs.form.reset();
   } catch (error) {
     alert('Something went wrong. Please check your info and try again.');
   }
