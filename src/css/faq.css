@@ -9,12 +9,12 @@
 .ac {
   padding-top: 20px;
 }
-#ac-0,
-#ac-1,
-#ac-2,
-#ac-3,
-#ac-4,
-#ac-5 {
+#faq-accordion #ac-3,
+#faq-accordion #ac-4,
+#faq-accordion #ac-5,
+#faq-accordion #ac-6,
+#faq-accordion #ac-7,
+#faq-accordion #ac-8 {
   --color-white: transparent;
   --color-black: var(--common-color);
   border-top-width: 1px;
@@ -24,10 +24,10 @@
   border-color: var(--common-border-hover);
   margin-bottom: 24px;
 }
-#ac-0 {
+#faq-accordion #ac-3 {
   border-top-width: 0;
 }
-.accordion-container {
+.faq-accordion {
   border-top-width: 1px;
   display: grid;
   grid-template-columns: 1fr;
@@ -35,12 +35,12 @@
   border-left: transparent;
   border-right: transparent;
 }
-#ac-trigger-0,
-#ac-trigger-1,
-#ac-trigger-2,
-#ac-trigger-3,
-#ac-trigger-4,
-#ac-trigger-5 {
+#faq-accordion #ac-3 #ac-trigger-3,
+#faq-accordion #ac-4 #ac-trigger-4,
+#faq-accordion #ac-5 #ac-trigger-5,
+#faq-accordion #ac-6 #ac-trigger-6,
+#faq-accordion #ac-7 #ac-trigger-7,
+#faq-accordion #ac-8 #ac-trigger-8 {
   font-family: 'Inter Tight', sans-serif;
   letter-spacing: -0.02em;
   line-height: 1.5;
@@ -50,12 +50,12 @@
   padding: 0;
   padding-right: 65px;
 }
-#ac-trigger-0::after,
-#ac-trigger-1::after,
-#ac-trigger-2::after,
-#ac-trigger-3::after,
-#ac-trigger-4::after,
-#ac-trigger-5::after {
+#faq-accordion #ac-3 #ac-trigger-3::after,
+#faq-accordion #ac-4 #ac-trigger-4::after,
+#faq-accordion #ac-5 #ac-trigger-5::after,
+#faq-accordion #ac-6 #ac-trigger-6::after,
+#faq-accordion #ac-7 #ac-trigger-7::after,
+#faq-accordion #ac-8 #ac-trigger-8::after {
   content: '\276F';
   display: flex;
   align-items: center;
@@ -70,20 +70,20 @@
   top: -5px;
   transition: transform 400ms ease-out;
 }
-#ac-0.is-active > .ac-header #ac-trigger-0::after,
-#ac-1.is-active > .ac-header #ac-trigger-1::after,
-#ac-2.is-active > .ac-header #ac-trigger-2::after,
-#ac-3.is-active > .ac-header #ac-trigger-3::after,
-#ac-4.is-active > .ac-header #ac-trigger-4::after,
-#ac-5.is-active > .ac-header #ac-trigger-5::after {
+#faq-accordion #ac-3.is-active > .ac-header #ac-trigger-3::after,
+#faq-accordion #ac-4.is-active > .ac-header #ac-trigger-4::after,
+#faq-accordion #ac-5.is-active > .ac-header #ac-trigger-5::after,
+#faq-accordion #ac-6.is-active > .ac-header #ac-trigger-6::after,
+#faq-accordion #ac-7.is-active > .ac-header #ac-trigger-7::after,
+#faq-accordion #ac-8.is-active > .ac-header #ac-trigger-8::after {
   transform: rotate(270deg);
 }
-#ac-text-0,
-#ac-text-1,
-#ac-text-2,
-#ac-text-3,
-#ac-text-4,
-#ac-text-5 {
+#faq-accordion #ac-3 #ac-panel-3 #ac-text-0,
+#faq-accordion #ac-4 #ac-panel-4 #ac-text-1,
+#faq-accordion #ac-5 #ac-panel-5 #ac-text-2,
+#faq-accordion #ac-6 #ac-panel-6 #ac-text-3,
+#faq-accordion #ac-7 #ac-panel-7 #ac-text-4,
+#faq-accordion #ac-8 #ac-panel-8 #ac-text-5 {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -98,47 +98,47 @@
   .ac {
     padding-top: 32px;
   }
-  #ac-0,
-  #ac-1,
-  #ac-2,
-  #ac-3,
-  #ac-4,
-  #ac-5 {
+  #faq-accordion #ac-0,
+  #faq-accordion #ac-1,
+  #faq-accordion #ac-2,
+  #faq-accordion #ac-3,
+  #faq-accordion #ac-4,
+  #faq-accordion #ac-5 {
     margin-bottom: 42px;
   }
-  #ac-text-0,
-  #ac-text-1,
-  #ac-text-2,
-  #ac-text-3,
-  #ac-text-4,
-  #ac-text-5 {
+  #faq-accordion #ac-3 #ac-panel-0 #ac-text-0,
+  #faq-accordion #ac-4 #ac-panel-1 #ac-text-1,
+  #faq-accordion #ac-5 #ac-panel-2 #ac-text-2,
+  #faq-accordion #ac-6 #ac-panel-3 #ac-text-3,
+  #faq-accordion #ac-7 #ac-panel-4 #ac-text-4,
+  #faq-accordion #ac-8 #ac-panel-5 #ac-text-5 {
     padding-top: 26px;
   }
-  #ac-trigger-0::after,
-  #ac-trigger-1::after,
-  #ac-trigger-2::after,
-  #ac-trigger-3::after,
-  #ac-trigger-4::after,
-  #ac-trigger-5::after {
+  #faq-accordion #ac-3 #ac-trigger-3::after,
+  #faq-accordion #ac-4 #ac-trigger-4::after,
+  #faq-accordion #ac-5 #ac-trigger-5::after,
+  #faq-accordion #ac-6 #ac-trigger-6::after,
+  #faq-accordion #ac-7 #ac-trigger-7::after,
+  #faq-accordion #ac-8 #ac-trigger-8::after {
     padding: 10px;
     width: 20px;
     height: 20px;
   }
-  #ac-text-0,
-  #ac-text-1,
-  #ac-text-2,
-  #ac-text-3,
-  #ac-text-4,
-  #ac-text-5 {
+  #faq-accordion #ac-3 #ac-panel-3 #ac-text-0,
+  #faq-accordion #ac-4 #ac-panel-4 #ac-text-1,
+  #faq-accordion #ac-5 #ac-panel-5 #ac-text-2,
+  #faq-accordion #ac-6 #ac-panel-6 #ac-text-3,
+  #faq-accordion #ac-7 #ac-panel-7 #ac-text-4,
+  #faq-accordion #ac-8 #ac-panel-8 #ac-text-5 {
     width: 94%;
   }
 }
 @media only screen and (min-width: 1440px) {
-  .accordion-container {
+  .faq-accordion {
     position: relative;
     grid-template-columns: repeat(2, 1fr);
   }
-  .accordion-container::after {
+  .faq-accordion::after {
     position: absolute;
     content: '';
     width: 1px;
@@ -148,23 +148,23 @@
     right: 48%;
     top: 0;
   }
-  #ac-1 {
+  #faq-accordion #ac-1 {
     border-top-width: 0;
   }
-  #ac-trigger-1,
-  #ac-text-1,
-  #ac-trigger-3,
-  #ac-text-3,
-  #ac-trigger-5,
-  #ac-text-5 {
+  #faq-accordion #ac-4 #ac-trigger-4,
+  #faq-accordion #ac-4 #ac-panel-4 #ac-text-1,
+  #faq-accordion #ac-6 #ac-trigger-6,
+  #faq-accordion #ac-6 #ac-panel-6 #ac-text-3,
+  #faq-accordion #ac-8 #ac-trigger-8,
+  #faq-accordion #ac-8 #ac-panel-8 #ac-text-5 {
     padding-left: 64px;
   }
-  #ac-text-0,
-  #ac-text-1,
-  #ac-text-2,
-  #ac-text-3,
-  #ac-text-4,
-  #ac-text-5 {
+  #faq-accordion #ac-3 #ac-panel-3 #ac-text-0,
+  #faq-accordion #ac-4 #ac-panel-4 #ac-text-1,
+  #faq-accordion #ac-5 #ac-panel-5 #ac-text-2,
+  #faq-accordion #ac-6 #ac-panel-6 #ac-text-3,
+  #faq-accordion #ac-7 #ac-panel-7 #ac-text-4,
+  #faq-accordion #ac-8 #ac-panel-8 #ac-text-5 {
     width: 85%;
   }
 }

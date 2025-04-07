@@ -3,7 +3,7 @@ import 'swiper/css';
 import Swiper from 'swiper/bundle';
 
 import refs from './service/refs.js';
-import { faq } from './js/faq.js';
+import faq from './js/faq';
 import about from './js/about.js';
 import './js/modalmobile.js';
 import './js/header.js';
