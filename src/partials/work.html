@@ -1,3 +1,72 @@
 <section class="work">
-  <div class="container"></div>
+  <div class="container">
+    <div class="work-hero">
+      <img
+        class="work-img"
+        src="{=$img-path}work-logo.webp"
+        srcset="{=$img-path}work-logo.webp 1x, {=$img-path}work-logo@2x.webp 2x"
+        alt="Photo"
+        width="70"
+        height="70"
+      />
+      <h2 class="work-title">LET'S <span class="work-span">WORK</span></h2>
+      <span class="span-together">TOGETHER</span>
+    </div>
+
+    <form id="work-contactform" class="work-contactform">
+      <div class="input-group">
+        <input
+          class="form-input"
+          type="email"
+          id="email"
+          name="email"
+          required
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          placeholder="clients@gmail.com"
+        />
+
+        <input
+          class="form-input"
+          id="comment"
+          name="comment"
+          rows="1"
+          placeholder="comments"
+        />
+      </div>
+
+      <button type="submit" id="sendButton" class="send-button">Send</button>
+    </form>
+    <div class="modal-backdrop hidden" id="modalBackdrop">
+      <div class="modal-window">
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+          &times;
+        </button>
+        <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
+        <p class="modal-desc">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. <br />Please stay in touch.
+        </p>
+      </div>
+    </div>
+    <address class="work-address">
+      <a
+        class="adress-link"
+        target="_blank"
+        rel="email"
+        href="mailto:lloydjefferson@gmail.com"
+        rel="noopener noreferrer"
+        >lloydjefferson@gmail.com
+      </a>
+
+      <a
+        class="adress-link"
+        target="_blank"
+        rel="phone"
+        href="tel:+380 11 1111 11 11"
+        rel="noopener noreferrer"
+        >+380 11 1111 11 11
+      </a>
+    </address>
+  </div>
 </section>
+<!-- <script src="modal-handler.js"></script> -->
