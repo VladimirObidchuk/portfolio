@@ -43,24 +43,24 @@ color: rgba(250, 250, 250, 0.4);
 
 
   /* Контейнер слайдера */
-.swiper {
+  #review .swiper-review {
     /* height: 386px; */
    /* padding-bottom: 100px; */
-    
+    position: unset;
     overflow: hidden;
     /* position: relative;  */
     
 }
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
     .swiper {
-     /* height: 402px; */
+     
         
     }
-  }
+  } */
 
 
 /* Стили для элементов списка слайдов */
-.swiper-wrapper {
+#review .swiper-wrapper-review {
     height: 350px;
     display: flex;
     padding: 0;
@@ -69,7 +69,7 @@ color: rgba(250, 250, 250, 0.4);
 }
 
 /* Стили для каждого слайда */
-.swiper-slide {
+#review .swiper-slide-review {
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
     padding: 32px 24px;
@@ -81,7 +81,7 @@ color: rgba(250, 250, 250, 0.4);
 }
 
 @media only screen and (min-width: 1440px) {
-        .swiper-slide {
+    #review .swiper-slide-review {
             
            max-width: 332px;
            
@@ -171,22 +171,26 @@ display: flex;
     }
   }
 
-  .review-icon{
+  #review .review-icon{
     width: 24px;
     height: 24px;
     stroke:#FAFAFA;
+    fill:none;
   }
 
   @media only screen and (min-width: 768px) {
-    .review-icon{
+    #review .review-icon{
         width: 32px;
         height: 32px;
       }
   }
 
 /* Стили для кнопок */
-.swiper-button-prev,
-.swiper-button-next {
+#review .swiper-button-prev-review,
+#review .swiper-button-next-review {
+    position:unset;
+    margin-top:unset;
+    /* display:block; */
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     padding: 14px;
@@ -195,29 +199,25 @@ display: flex;
     cursor: pointer;
     background-color: inherit;
     
-    
 }
 
-.swiper-button-disabled{
+#review .swiper-button-disabled{
     border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.swiper-button-disabled .review-icon{
+#review .swiper-button-disabled .review-icon{
     stroke:#3B3B3B;
     
 }
 
 @media only screen and (min-width: 768px) {
-    .swiper-button-prev,
-    .swiper-button-next {
+    #review .swiper-button-prev-review,
+    #review .swiper-button-next-review {
       
         padding: 18px;
         width: 68px;
         height: 68px;
-        
-      
-        
+          
     }
   }
-
 
