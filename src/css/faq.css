@@ -50,12 +50,12 @@
   padding: 0;
   padding-right: 65px;
 }
-#faq-accordion #ac-3 #ac-trigger-3::after,
-#faq-accordion #ac-4 #ac-trigger-4::after,
-#faq-accordion #ac-5 #ac-trigger-5::after,
-#faq-accordion #ac-6 #ac-trigger-6::after,
-#faq-accordion #ac-7 #ac-trigger-7::after,
-#faq-accordion #ac-8 #ac-trigger-8::after {
+#ac-3 #ac-trigger-3::after,
+#ac-4 #ac-trigger-4::after,
+#ac-5 #ac-trigger-5::after,
+#ac-6 #ac-trigger-6::after,
+#ac-7 #ac-trigger-7::after,
+#ac-8 #ac-trigger-8::after {
   content: '\276F';
   display: flex;
   align-items: center;
@@ -83,7 +83,7 @@
 #faq-accordion #ac-5 #ac-panel-5 #ac-text-2,
 #faq-accordion #ac-6 #ac-panel-6 #ac-text-3,
 #faq-accordion #ac-7 #ac-panel-7 #ac-text-4,
-#faq-accordion #ac-8 #ac-panel-8 #ac-text-5 {
+#faq-accordion #ac-8 #ac-panel-8 #ac-text-8 {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 16px;

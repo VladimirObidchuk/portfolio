@@ -22,7 +22,7 @@ export default function about() {
 
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     spaceBetween: 0,
     navigation: {
       nextEl: '.swiper-button-next',
