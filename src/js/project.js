@@ -8,10 +8,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/keyboard';
 
-const swiper = new Swiper('.swiper', {
+const projSwiper = new Swiper('.project-swiper', {
   modules: [Navigation, Keyboard],
   loop: false,
   centeredSlides: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
 
   keyboard: {
     enabled: true,
