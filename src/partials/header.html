@@ -1,5 +1,60 @@
 <header class="header">
   <div class="container">
-    <nav class="nav"></nav>
+    <nav class="header-nav">
+      <a class="nav-logo" href="{=$home-path}" aria-label="Site logo">
+        <img class="nav-logo-png" src="{=$img-path}" alt="developer man" />
+        <span class="logo-text">jefferson*</span>
+      </a>
+      <button class="nav-menu-btn js-menu" type="button">Menu</button>
+      <ul class="nav-list hidden">
+        <li class="nav-item">
+          <a href="#about">About me</a>
+        </li>
+        <li class="nav-item">
+          <a href="#benefits">Benefits</a>
+        </li>
+        <li class="nav-item">
+          <a href="#project">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#faq">FAQ</a>
+        </li>
+      </ul>
+      <a class="header-link link-btn" href="#work">Order the project</a>
+      <button class="burger-btn" type="button" data-modal-open>
+        <svg class="burger-btn-icon" width="28" height="28">
+          <use href="{=$icon-path}#icon-burger"></use>
+        </svg>
+      </button>
+    </nav>
   </div>
 </header>
+
+<!-- Modal Window  -->
+
+<div class="wrapper" data-modal>
+  <div class="burger-menu">
+    <button class="burger-btn-close" type="button" data-modal-close>
+      <svg class="burger-svg-close" width="28" height="28">
+        <use href="{=$icon-path}#icon-clouse"></use>
+      </svg>
+    </button>
+    <nav class="burger-nav">
+      <ul class="burger-list">
+        <li class="burger-item">
+          <a class="burger-nav-link" href="#">About me</a>
+        </li>
+        <li class="burger-item">
+          <a class="burger-nav-link" href="#">Benefits</a>
+        </li>
+        <li class="burger-item">
+          <a class="burger-nav-link" href="#">Projects</a>
+        </li>
+        <li class="burger-item">
+          <a class="burger-nav-link" href="#">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="burger-btn-link" href="#">Order the project</a>
+  </div>
+</div>

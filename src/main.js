@@ -1,21 +1,61 @@
-import refs from './service/refs.js';
+import Swiper from 'swiper';
+import 'swiper/css';
 
-import about from './js/about.js';
-import covers from './js/covers.js';
-import faq from './js/faq.js';
-import header from './js/header.js';
-import project from './js/project.js';
+import refs from './service/refs.js';
+import { faq } from './js/faq.js';
+// import './js/modalmobile.js';
+import './js/header.js';
+// import './js/project.js';
 import { getAllReviews, setReview } from './js/reviewe-api.js';
-import review from './js/reviews.js';
-import work from './js/work.js';
+import { reviewsRender, emptyRender } from './js/reviews.js';
 
 //-----------------All reviews--------------------//
 getAllReviews()
   .then(data => {
-    //добавляйте функціонал для рендеренгу
+    refs.reviewContainer.insertAdjacentHTML('beforeend', reviewsRender(data));
     console.log(data);
+
+    const reviewsSwiper = new Swiper('.review-swiper', {
+      spaceBetween: 16,
+      autoHeight: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      breakpoints: {
+        1440: {
+          slidesPerView: 4,
+        },
+
+        768: {
+          slidesPerView: 2,
+        },
+
+        0: {
+          slidesPerView: 1,
+        },
+      },
+    });
   })
-  .catch(error => console.error);
+  .catch(error => {
+    emptyRender();
+
+    const scrollHandler = function () {
+      const rect = reviewContainer.getBoundingClientRect();
+
+      // Если верхняя часть секции видна на экране (появляется в области видимости)
+      if (rect.top >= 0 && rect.top <= window.innerHeight) {
+        // здесь должно быть что-то типа Toaster
+        console.log('Error:', error.message);
+
+        // Снимаем слушатель после того, как он сработал
+        window.removeEventListener('scroll', scrollHandler);
+      }
+    };
+
+    window.addEventListener('scroll', scrollHandler);
+  });
 //-------------------------------------//
 
 //-----------------Add new review--------------------//
@@ -29,3 +69,6 @@ async function addReview(e) {
 //-------------------------------------//
 
 about();
+
+faq();
+
