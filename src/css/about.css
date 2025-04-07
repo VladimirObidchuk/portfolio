@@ -184,16 +184,16 @@
     max-width: 768px;
   }
 
-  .swiper {
+  /* .swiper {
     width: 600px;
-  }
+  } */
 
-  .swiper-slide {
+  /* .swiper-slide {
     width: 200px !important;
     height: 200px;
     font-size: 20px;
     letter-spacing: -0.02em;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1440px) {
@@ -227,7 +227,7 @@
     max-width: 1440px;
   }
 
-  .swiper {
+  /* .swiper {
     width: 1200px;
-  }
+  } */
 }

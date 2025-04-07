@@ -1,5 +1,6 @@
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
 import 'swiper/css';
+import Swiper from 'swiper/bundle';
 
 import refs from './service/refs.js';
 import { faq } from './js/faq.js';
@@ -17,9 +18,10 @@ getAllReviews()
     refs.reviewContainer.insertAdjacentHTML('beforeend', reviewsRender(data));
     console.log(data);
 
-    const reviewsSwiper = new Swiper('.review-swiper', {
+    // const reviewsSwiper = 
+    new Swiper('.swiper-review', {
       spaceBetween: 16,
-      autoHeight: false,
+      // autoHeight: false,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -40,11 +42,15 @@ getAllReviews()
       },
     });
   })
+
   .catch(error => {
-    emptyRender();
+
+   
+    refs.reviewContainer.insertAdjacentHTML('beforeend', emptyRender());
+    // emptyRender();
 
     const scrollHandler = function () {
-      const rect = reviewContainer.getBoundingClientRect();
+      const rect = refs.reviewContainer.getBoundingClientRect();
 
       // Если верхняя часть секции видна на экране (появляется в области видимости)
       if (rect.top >= 0 && rect.top <= window.innerHeight) {

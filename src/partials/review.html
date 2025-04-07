@@ -1,17 +1,21 @@
+
+
 <section id="review" class="review">
+  
   <div class="container review-container">
-    <h3 class="review-title">Reviews</h3>
-    <div class="swiper review-swiper">  
-  <div class="swiper-wrapper review-wrapper"></div>
-  <button class="swiper-button-prev swiper-button-prev-review">
-        <svg class="review-icon">
-        <use href="{=$icon-path}#icon-arrow-narrow-left"></use>
-      </svg>
-    </button>
-      <button class="swiper-button-next swiper-button-next-review">
-        <svg class="review-icon">
-        <use href="{=$icon-path}#icon-arrow-narrow-right"></use>
-      </svg>
-    </button>
-  </div>
+    <h3 class="review-title">
+    Reviews
+    </h3>
+    
+
+</div>
+
 </section>
+
+<style>
+
+#review .swiper-button-prev:after, .swiper-button-next:after {
+  content: none;
+}
+</style>
+
