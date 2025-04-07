@@ -15,9 +15,7 @@ getAllReviews()
     refs.reviewContainer.insertAdjacentHTML('beforeend', reviewsRender(data));
     console.log(data);
 
-    new Swiper('.mySwiper', {
-      // slidesPerView: 4,
-
+    const reviewsSwiper = new Swiper('.review-swiper', {
       spaceBetween: 16,
       autoHeight: false,
       navigation: {
