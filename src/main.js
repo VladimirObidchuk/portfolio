@@ -27,3 +27,5 @@ async function addReview(e) {
   } catch (error) {}
 }
 //-------------------------------------//
+
+about();
