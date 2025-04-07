@@ -1,6 +1,8 @@
 import { faq } from './js/faq.js';
 // import './js/modalmobile.js';
 import './js/header.js';
+// import './js/project.js';
+// import './js/reviews.js';
 import { getAllReviews, setReview } from './js/reviewe-api.js';
 
 //-----------------All reviews--------------------//
