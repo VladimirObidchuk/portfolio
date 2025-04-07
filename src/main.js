@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 import refs from './service/refs.js';
-import { faq } from './js/faq.js';
+import faq from './js/faq';
 import about from './js/about.js';
 import './js/modalmobile.js';
 import './js/header.js';
