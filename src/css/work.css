@@ -1,6 +1,4 @@
 .work {
-  padding-left: 16px;
-  padding-right: 16px;
   padding-top: 64px;
   padding-bottom: 32px;
   position: relative;
@@ -45,20 +43,24 @@
   gap: 16px;
 }
 .form-input {
+  width: 100%;
+  display: inline-block;
   color: var(--common-color);
-  padding: 0 0 20px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  margin-bottom: 4px;
   transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  letter-spacing: -0.02em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
-  max-width: 100%;
-  display: inline-block;
+  padding: 20px 0;
+}
+.form-input::placeholder {
+  padding-bottom: 20px;
 }
 .send-button {
   background-color: var(--common-bg-btn-color);
@@ -102,11 +104,8 @@
 }
 @media only screen and (min-width: 768px) {
   .work {
-    padding-left: 32px;
-    padding-right: 32px;
     padding-top: 96px;
     padding-bottom: 169px;
-    position: relative;
   }
   .work-hero {
     gap: 10px;
@@ -122,10 +121,10 @@
   .work-contactform {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: row;
     gap: 32px;
     margin-bottom: 78px;
-    justify-content: flex-start;
   }
   .input-group {
     flex-direction: row;
@@ -135,7 +134,7 @@
     align-items: center;
   }
   .form-input {
-    width: 186px;
+    width: 245px;
   }
   .send-button {
     height: 150px;
