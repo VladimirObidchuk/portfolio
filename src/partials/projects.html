@@ -4,48 +4,50 @@
     <div class="swiper project-swiper">
       <ul class="project-list swiper-wrapper">
         <li class="project-item swiper-slide">
-          <div class="project-information">
-            <ul class="skill-text-block">
-              <li><p class="skill-text">#react</p></li>
-              <li><p class="skill-text">#js</p></li>
-              <li><p class="skill-text">#node js</p></li>
-              <li><p class="skill-text">#git</p></li>
-            </ul>
-            <p class="project-description-text">
-              Programming Across Borders: Ideas, Technologies, Innovations
-            </p>
-            <a
-              href="https://github.com/VladimirObidchuk/portfolio"
-              target="_blank"
-              class="project-link"
-              rel="noopener noreferrer"
-              >See project</a
-            >
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                media="(max-width:767px)"
-                srcset="
-                  ../img/project/project-img-1-mob.webp    1x,
-                  ../img/project/project-img-1-mob@2x.webp 2x
-                "
-              />
-              <source
-                media="(min-width:768px)"
-                srcset="
-                  ../img/project/project-img-1-desc.webp    1x,
-                  ../img/project/project-img-1-desc@2x.webp 2x
-                "
-              />
-              <img
-                class="project-img"
-                src="../img/project/project-img-1-mob.webp 1x"
-                alt="Library app"
-                width="311"
-                height="195"
-              />
-            </picture>
+          <div class="project-desc">
+              <div class="project-information">
+                <ul class="skill-text-block">
+                  <li><p class="skill-text">#react</p></li>
+                  <li><p class="skill-text">#js</p></li>
+                  <li><p class="skill-text">#node js</p></li>
+                  <li><p class="skill-text">#git</p></li>
+                </ul>
+                <p class="project-description-text">
+                  Programming Across Borders: Ideas, Technologies, Innovations
+                </p>
+                <a
+                  href="https://github.com/VladimirObidchuk/portfolio"
+                  target="_blank"
+                  class="project-link"
+                  rel="noopener noreferrer"
+                  >See project</a
+                >
+              </div>
+              <div class="img-block">
+                <picture>
+                  <source
+                    media="(max-width:767px)"
+                    srcset="
+                      {=$img-path}project-img-1-mob.webp    1x,
+                      {=$img-path}project-img-1-mob@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      {=$img-path}project-img-1-desc.webp    1x,
+                      {=$img-path}project-img-1-desc@2x.webp 2x
+                    "
+                  />
+                  <img
+                    class="project-img"
+                    src="{=$img-path}project-img-1-mob.webp 1x"
+                    alt="Library app"
+                    width="311"
+                    height="195"
+                  />
+                </picture>
+              </div>
           </div>
         </li>
 
@@ -73,20 +75,20 @@
               <source
                 media="(max-width:767px)"
                 srcset="
-                  ../img/project/project-img-2-mob.webp    1x,
-                  ../img/project/project-img-2-mob@2x.webp 2x
+                  {=$img-path}project-img-2-mob.webp    1x,
+                  {=$img-path}project-img-2-mob@2x.webp 2x
                 "
               />
               <source
                 media="(min-width:768px)"
                 srcset="
-                  ../img/project/project-img-2-desc.webp    1x,
-                  ../img/project/project-img-2-desc@2x.webp 2x
+                  {=$img-path}project-img-2-desc.webp    1x,
+                  {=$img-path}project-img-2-desc@2x.webp 2x
                 "
               />
               <img
                 class="project-img"
-                src="../img/project/project-img-2-mob.webp 1x"
+                src="{=$img-path}project-img-2-mob.webp 1x"
                 alt="Veterinarian examining the dog"
                 width="311"
                 height="195"
@@ -119,21 +121,21 @@
               <source
                 media="(max-width:767px)"
                 srcset="
-                  ../img/project/project-img-3-mob.webp    1x,
-                  ../img/project/project-img-3-mob@2x.webp 2x
+                  {=$img-path}project-img-3-mob.webp    1x,
+                  {=$img-path}project-img-3-mob@2x.webp 2x
                 "
               />
               <source
                 media="(min-width:768px)"
                 srcset="
-                  ../img/project/project-img-3-desc.webp    1x,
-                  ../img/project/project-img-3-desc@2x.webp 2x
+                  {=$img-path}project-img-3-desc.webp    1x,
+                  {=$img-path}project-img-3-desc@2x.webp 2x
                 "
               />
 
               <img
                 class="project-img"
-                src="../img/project/project-img-3-mob.webp 1x"
+                src="{=$img-path}project-img-3-mob.webp 1x"
                 alt="Dictionary app"
                 width="311"
                 height="195"

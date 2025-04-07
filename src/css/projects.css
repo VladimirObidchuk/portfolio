@@ -1,24 +1,26 @@
 .project {
   margin-top: 64px;
 }
+.project-item {
+  width: 100%;
+}
 .project-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.4);
+  color: var(--common-text-color);
   margin-bottom: 32px;
 }
 .project-list {
-  max-width: 343px;
   width: 100%;
 }
 
 .project-information {
   border-radius: 24px 24px 0 0;
-  background: #fafafa;
-  padding: 32px 32px 45px 32px;
+  background: var(--common-color);
+  padding: 32px;
 }
 
 .skill-text-block {
@@ -36,8 +38,8 @@
 
 .skill-text {
   letter-spacing: -0.02em;
-  color: #1c1d20;
-  border: 1px solid rgba(28, 29, 32, 0.2);
+  color: var(--common-bg);
+  border: 1px solid var(--project-border-color);
   border-radius: 60px;
   padding: 13px 18px;
 
@@ -53,35 +55,28 @@
   font-size: 24px;
   line-height: 1.16667;
   letter-spacing: -0.03em;
-  color: #1c1d20;
+  color: var(--common-bg);
   margin-bottom: 45px;
   max-width: 279px;
   width: 100%;
 }
 .project-link {
   letter-spacing: -0.02em;
-  color: #fafafa;
+  color: var(--common-color);
   border-radius: 60px;
   padding: 13px 32px;
-  max-width: 141px;
-  width: 100%;
+  min-width: 141px;
   cursor: pointer;
-  border: solid 1px #ed3b44;
-  background-color: #ed3b44;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
+  border: none;
+  background-color: var(--common-bg-btn-color);
 }
 
 .project-link:hover {
-  background: #e0373f;
+  background-color: var(--common-bg-btn-color-hover);
 }
 
 .img-block {
-  background: #242527;
+  background: var(--common-benefits-dg-color);
   border-radius: 0 0 24px 24px;
 }
 
@@ -107,14 +102,14 @@
   gap: 10px;
   margin-top: 32px;
 
-  border: 1px solid rgba(250, 250, 250, 0.5);
+  border: 1px solid var(--common-border-color);
   border-radius: 60px;
   padding: 18px;
   width: 68px;
   height: 68px;
   background-color: var(--common-bg);
 
-  stroke: white;
+  stroke: var(--common-color);
 }
 
 .swiper-button-disabled {
@@ -125,7 +120,7 @@
 
 @media only screen and (min-width: 768px) {
   .project-information {
-    padding: 64px 146px 82px 64px;
+    padding: 64px;
   }
 
   .skill-text-block {
