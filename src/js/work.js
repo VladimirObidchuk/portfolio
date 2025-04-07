@@ -23,7 +23,9 @@ document.addEventListener('keydown', e => {
 refs.form.addEventListener('submit', async e => {
   e.preventDefault();
   const email = refs.emailInput.value.trim();
-  const comment = document.getElementById('comment').value.trim();
+  console.log(' email', email);
+  const comment = refs.comment.value.trim();
+  console.log(' comment', comment);
   if (!emailPattern.test(email)) {
     alert('Invalid email, try again');
     return;

@@ -103,7 +103,7 @@
   margin-top: 32px;
 }
 
-.swiper {
+.about-swiper {
   width: 260px;
   max-width: 100%;
   margin-left: 0;
@@ -111,11 +111,11 @@
   margin-right: auto;
 }
 
-.swiper-wrapper {
+.about-wrapper {
   align-items: center;
 }
 
-.swiper-slide {
+.about-slide {
   width: 130px !important;
   height: 130px;
   border: 1px rgba(250, 250, 250, 0.2) solid;

@@ -1,6 +1,3 @@
-export function project(params) {}
-export default project;
-
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 

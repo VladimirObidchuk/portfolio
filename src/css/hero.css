@@ -1,5 +1,4 @@
 .hero {
-  height: 812px;
   background-image: url('../img/bg-modal.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +26,7 @@
 }
 
 .hero-title-div {
-  margin-bottom: 212px;
+  padding-bottom: 212px;
 }
 
 .hero-social-links {
@@ -42,8 +41,7 @@
   border-radius: 60px;
   align-items: center;
   justify-content: center;
-  width: 37px;
-  height: 37px;
+  padding: 10px;
   display: flex;
 }
 
@@ -63,7 +61,6 @@
 
 @media only screen and (min-width: 768px) {
   .hero {
-    height: 1024px;
     background-image: url('../img/bg-hero-tablet.png');
   }
 
@@ -76,7 +73,8 @@
     font-size: 90px;
   }
   .hero-title-div {
-    margin-bottom: 187px;
+    padding-top: 300px;
+    padding-bottom: 187px;
   }
 
   .hero-social-links {
@@ -84,10 +82,14 @@
     width: 100%;
     justify-content: flex-end;
   }
-
+  .hero-social-link-item:hover {
+    border-color: var(--common-bg-btn-color-hover);
+  }
+  .hero-social-link-item:hover .hero-social-link-item-text {
+    color: var(--common-bg-btn-color-hover);
+  }
   .hero-social-link-item {
-    width: 55px;
-    height: 55px;
+    padding: 18px 20px;
   }
 
   .hero-social-link-item.contact-email {
@@ -109,6 +111,6 @@
   .hero-title-div {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 243px;
+    padding-bottom: 243px;
   }
 }

@@ -3,9 +3,11 @@ import 'swiper/css';
 
 import refs from './service/refs.js';
 import { faq } from './js/faq.js';
-// import './js/modalmobile.js';
+import about from './js/about.js';
+import './js/modalmobile.js';
 import './js/header.js';
-// import './js/project.js';
+import './js/project.js';
+import './js/work.js';
 import { getAllReviews, setReview } from './js/reviewe-api.js';
 import { reviewsRender, emptyRender } from './js/reviews.js';
 
@@ -64,11 +66,12 @@ async function addReview(e) {
   try {
     const newReview = [emailData, commentData]; // створюємо масив даних з input
     const addNewReview = await setReview(newReview);
-  } catch (error) {}
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 //-------------------------------------//
 
 about();
 
 faq();
-
