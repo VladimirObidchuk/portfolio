@@ -1,21 +1,24 @@
 import Swiper from 'swiper';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/keyboard';
 
 const projSwiper = new Swiper('.project-swiper', {
-  modules: [Navigation, Keyboard],
+  modules: [Navigation, Keyboard, Mousewheel],
   loop: false,
+
   centeredSlides: true,
   slidesPerView: 1,
+  slidesPerGroup: 1,
   autoHeight: true,
 
-  spaceBetween: 10,
+  mousewheel: true,
+
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
+    onlyInViewport: true,
   },
   simulateTouch: true,
   navigation: {
