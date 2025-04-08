@@ -51,24 +51,24 @@
     text-decoration-skip-ink: none;
     color: var(--common-color);
   }
+  .nav-menu-btn:focus,
+  .nav-item:focus,
+  .nav-menu-btn:hover,
+  .nav-item:hover {
+    color: var(--common-bg-btn-color);
+    text-decoration: underline;
+  }
+  .nav-item:active,
+  .nav-item:hover,
+  .nav-menu-btn:active {
+    color: var(--common-bg-btn-color);
+  }
 }
 
 .nav-item,
 .nav-menu-btn,
 .header-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-menu-btn:focus,
-.nav-item:focus,
-.nav-menu-btn:hover,
-.nav-item:hover {
-  text-decoration: underline;
-}
-.nav-item:active,
-.nav-item:hover,
-.nav-menu-btn:active {
-  color: var(--common-bg-btn-color);
 }
 
 .nav-list {

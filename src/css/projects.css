@@ -48,7 +48,6 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
-
   flex-shrink: 0;
 }
 .project-description-text {
@@ -61,6 +60,7 @@
   width: 100%;
 }
 .project-link {
+  display: inline-block;
   letter-spacing: -0.02em;
   color: var(--common-color);
   border-radius: 60px;
@@ -100,8 +100,6 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
-  margin-top: 32px;
-
   border: 1px solid var(--common-border-color);
   border-radius: 60px;
   padding: 18px;
@@ -119,6 +117,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .project {
+    padding-top: 96px;
+  }
   .project-information {
     padding: 64px;
   }
@@ -149,7 +150,7 @@
 
 @media only screen and (min-width: 1440px) {
   .project {
-    padding-top: 96px;
+    padding-top: 164px;
   }
   .project-desc {
     display: flex;

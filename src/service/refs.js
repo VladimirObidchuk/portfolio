@@ -2,18 +2,19 @@
 //  Як потрбно додавати: це через ID productList: document.getElementById('allProducts'),
 //  Це через class productList: document.querySelector('.allProducts'),
 const refs = {
+  body: document.body,
   //------------------header------------//
-  menuBtn: document.querySelector('.js-menu'),
   listLink: document.querySelector('.nav-list'),
-
-  //------------modal mobile-------------------//
   menuBtn: document.querySelector('.js-menu'),
+  //------------modal mobile-------------------//
   openModalBtn: document.querySelector('[data-modal-open]'),
   closeModalBtn: document.querySelector('[data-modal-close]'),
   choiceSectionMenu: document.querySelectorAll('.burger-nav-link'),
   orderBtnLink: document.querySelector('.burger-btn-link'),
   modal: document.querySelector('[data-modal]'),
 
+  //----------------about--------------------//
+  firstAccItem: document.getElementById('ac-0'),
   //-----------reviews------------//
   reviewContainer: document.querySelector('.review-container'),
   //------------work----------------------//
