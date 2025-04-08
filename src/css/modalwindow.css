@@ -7,9 +7,9 @@
 
   background: linear-gradient(
     90deg,
-    #ed3b44 0%,
+    var(--common-bg-btn-color) 0%,
     #69292d 32.27%,
-    #1c1d20 50.32%
+    var(--common-bg) 50.32%
   );
   pointer-events: none;
   transform: translateX(100%);

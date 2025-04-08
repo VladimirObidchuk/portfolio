@@ -47,7 +47,7 @@
 #about-accordion #ac-2 {
   background-color: transparent;
   border: none;
-  border-bottom: 1px rgba(250, 250, 250, 0.2) solid;
+  border-bottom: 1px var(--common-border-hover) solid;
   padding-bottom: 32px;
 }
 
@@ -59,7 +59,7 @@
   line-height: 1.5;
   font-weight: 600;
   font-size: 20px;
-  color: #fafafa;
+  color: var(--common-color);
   padding: 0;
   padding-right: 65px;
   text-transform: uppercase;
@@ -73,7 +73,7 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: #fafafa;
+  color: var(--common-color);
 }
 #ac-0 #ac-trigger-0::after,
 #ac-1 #ac-trigger-1::after,
@@ -104,13 +104,6 @@
   max-width: 45%;
   position: relative;
 }
-
-/* .about-swiper {
-  margin-left: 0;
-  position: relative;
-  margin-right: auto;
-} */
-
 .about-wrapper {
   align-items: center;
 }
@@ -132,7 +125,7 @@
   width: 130px;
   height: 130px;
   border-radius: 100%;
-  border: 1px rgba(250, 250, 250, 0.2) solid;
+  border: 1px var(--common-border-hover) solid;
   justify-content: center;
   display: flex;
   align-items: center;

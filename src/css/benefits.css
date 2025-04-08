@@ -19,7 +19,7 @@
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
-  color: rgba(250, 250, 250, 0.4);
+  color: var(--common-text-color);
   line-height: 1.5;
   letter-spacing: -0.02em;
   flex-shrink: 0;
@@ -101,7 +101,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background-color: #ed3b44;
+  background-color: var(--common-bg-btn-color);
   border-radius: 10px;
 }
 
@@ -117,7 +117,7 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
+  color: var(--common-placholder-color);
 }
 
 /* Кнопка */
@@ -125,8 +125,8 @@
   display: inline-block;
   padding: 12px 24px;
   background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
+  color: var(--common-color);
+  border: 1px solid var(--common-color);
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 250ms, border-color 250ms;
@@ -141,14 +141,14 @@
   .benefits-button:hover,
   .benefits-button:focus {
     background-color: rgba(237, 59, 68, 0.1);
-    border-color: #ed3b44;
+    border-color: var(--common-bg-btn-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
 .benefits-button:active {
-  background-color: #ed3b44;
-  color: #fff;
-  border-color: #ed3b44;
+  background-color: var(--common-bg-btn-color);
+  color: var(--common-color);
+  border-color: var(--common-bg-btn-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
