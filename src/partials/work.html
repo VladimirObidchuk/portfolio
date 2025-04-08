@@ -15,23 +15,28 @@
 
     <form id="work-contactform" class="work-contactform">
       <div class="input-group">
-        <input
-          class="form-input"
-          type="email"
-          id="email"
-          name="email"
-          required
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-          placeholder="clients@gmail.com"
-        />
-
-        <input
-          class="form-input"
-          id="comment"
-          name="comment"
-          rows="1"
-          placeholder="comments"
-        />
+        <div class="input-wrapper">
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            required
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            placeholder="clients@gmail.com"
+          />
+          <p id="email-message" class="input-message"></p>
+        </div>
+        <div class="input-wrapper">
+          <input
+            class="form-input"
+            id="comment"
+            name="comment"
+            rows="1"
+            placeholder="comments"
+          />
+          <p id="comment-message" class="input-message"></p>
+        </div>
       </div>
 
       <button type="submit" id="sendButton" class="send-button">Send</button>
@@ -48,24 +53,26 @@
         </p>
       </div>
     </div>
-    <address class="work-address">
-      <a
-        class="adress-link"
-        target="_blank"
-        rel="email"
-        href="mailto:lloydjefferson@gmail.com"
-        rel="noopener noreferrer"
-        >lloydjefferson@gmail.com
-      </a>
 
-      <a
-        class="adress-link"
-        target="_blank"
-        rel="phone"
-        href="tel:+380 11 1111 11 11"
-        rel="noopener noreferrer"
-        >+380 11 1111 11 11
-      </a>
+    <address class="work-address">
+      <ul class="work-address-list">
+        <li class="work-address-item">
+          <a
+            class="work-address-link"
+            href="mailto:lloydjefferson@gmail.com"
+            rel="noopener noreferrer"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="work-address-item">
+          <a
+            class="work-address-link"
+            href="tel:+3801111111111"
+            rel="noopener noreferrer"
+            >+380 11 1111 11 11</a
+          >
+        </li>
+      </ul>
     </address>
   </div>
 </section>
