@@ -110,9 +110,6 @@ overflow: auto; */
   justify-content: center;
   align-items: center;
 }
-.visually-hidden {
-  display: none;
-}
 
 /* Контейнер для кнопок (располагаем внизу слайдера) */
 .buttons-div {
