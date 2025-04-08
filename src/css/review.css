@@ -1,10 +1,19 @@
 .review {
   padding-top: 64px;
+  padding-bottom: 64px;
 }
-/* Styles for Desktop devices */
-@media only screen and (min-width: 1440px) {
+
+@media only screen and (min-width: 768px) {
   .review {
     padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .review {
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
 }
 
@@ -89,6 +98,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 .visually-hidden {
   display: none;
