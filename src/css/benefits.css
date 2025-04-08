@@ -1,6 +1,7 @@
 .benefits {
-  padding-top: 64px;
+  padding: 64px 0;
 }
+
 .benefits-container {
   display: flex;
   flex-direction: column;
