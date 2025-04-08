@@ -47,6 +47,9 @@
   }
 }
 @media only screen and (min-width: 768px) {
+  .covers {
+    padding-top: 96px;
+  }
   .covers-container {
     height: 960px;
   }
@@ -61,6 +64,6 @@
 }
 @media only screen and (min-width: 1440px) {
   .covers {
-    padding-top: 96px;
+    padding-top: 164px;
   }
 }

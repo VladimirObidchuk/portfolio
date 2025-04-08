@@ -36,9 +36,8 @@
 
 @media (min-width: 768px) {
   .benefits {
-    padding: 96px 0;
+    padding-top: 96px;
   }
-
   .benefits-content {
     gap: 64px;
   }
@@ -46,7 +45,7 @@
 
 @media (min-width: 1440px) {
   .benefits {
-    padding: 164px 0;
+    padding-top: 164px;
   }
   .benefits-content {
     width: 50%;

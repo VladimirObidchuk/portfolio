@@ -21,18 +21,22 @@ export const reviewsRender=(data)=>{
 
   const fullMarkup=`<div class="swiper swiper-review">
       <ul class="swiper-wrapper swiper-wrapper-review">${cardsMarkup}</ul>
-    <div class="buttons-div">
-      <button class="swiper-button-prev swiper-button-prev-review">
+    <ul class="buttons-div">
+      <li class="swiper-button-prev swiper-button-prev-review">
         <svg class="review-icon">
         <use href="${sprite}#icon-arrow-narrow-left"></use>
       </svg>
-    </button>
-      <button class="swiper-button-next swiper-button-next-review">
+    </li>
+      <li class="swiper-button-next swiper-button-next-review">
         <svg class="review-icon">
         <use href="${sprite}#icon-arrow-narrow-right"></use>
       </svg>
-    </button>
-    </div>`
+    </li>
+    </ul><style>
+#review .swiper-button-prev:after, .swiper-button-next:after {
+  content: none;
+}
+</style>`
 
     
   return fullMarkup;
