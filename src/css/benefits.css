@@ -1,32 +1,58 @@
-.benefits-title {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #999;
-  margin-bottom: 40px;
-}
-
-.benefits-box {
+.benefits-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 40px;
+  padding: 0 0 64px;
+}
+
+@media (min-width: 768px) {
+  .benefits-container {
+    padding: 0 0 96px;
+  }
 }
 
 @media (min-width: 1440px) {
-  /* .container {
+  .benefits-container {
     flex-direction: row;
-    justify-content: flex-start;
     align-items: flex-start;
-  } */
+    justify-content: space-between;
+    padding: 0 0 164px;
+  }
+}
+
+.benefits-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(250, 250, 250, 0.4);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  width: 50%;
+}
+
+.benefits-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .benefits-content {
+    gap: 64px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .benefits-content {
+    width: 50%;
+  }
 
   .benefits-title {
     flex-basis: 50%;
     margin-right: auto;
-    padding-top: 12px;
-  }
-
-  .benefits-box {
-    flex-basis: 50%;
-    align-items: flex-start;
   }
 }
 
@@ -79,31 +105,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   background-color: #ed3b44;
-  border-radius: 8px;
-  margin-bottom: 64px;
+  border-radius: 10px;
 }
 
 /* Заголовок */
 .benefits-item-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  margin: 0;
+  letter-spacing: -0.02em;
 }
 
 /* Опис */
 .benefits-item-descr {
-  font-size: 14px;
-  color: #ccc;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
 }
 
 /* Кнопка */
 .benefits-button {
   display: inline-block;
-  margin-top: 64px;
   padding: 12px 24px;
   background-color: transparent;
   color: #fff;
@@ -115,6 +140,10 @@
 }
 
 @media (min-width: 1440px) {
+  .benefits-button {
+    align-self: flex-start;
+  }
+
   .benefits-button:hover,
   .benefits-button:focus {
     background-color: rgba(237, 59, 68, 0.1);
