@@ -19,7 +19,7 @@ export default function about() {
     },
   });
 
-  const swiper = new Swiper('.about-swiper', {
+  new Swiper('.about-swiper', {
     loop: true,
     spaceBetween: 1,
     navigation: {

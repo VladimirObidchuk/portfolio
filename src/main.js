@@ -16,8 +16,6 @@ import { reviewsRender, emptyRender } from './js/reviews.js';
 getAllReviews()
   .then(data => {
     refs.reviewContainer.insertAdjacentHTML('beforeend', reviewsRender(data));
-    console.log(data);
-
     // const reviewsSwiper =
     new Swiper('.swiper-review', {
       spaceBetween: 16,
