@@ -40,6 +40,9 @@
 }
 
 @media (min-width: 1440px) {
+  .benefits {
+    padding-top: 96px;
+  }
   .benefits-content {
     width: 50%;
   }

@@ -153,9 +153,6 @@
   }
 }
 @media only screen and (min-width: 768px) {
-  .about {
-    padding-bottom: 48px;
-  }
   .about-container {
     max-width: 86%;
   }
@@ -200,8 +197,7 @@
 }
 @media only screen and (min-width: 1440px) {
   .about {
-    padding-top: 48px;
-    padding-bottom: 82px;
+    padding-top: 96px;
     display: flex;
   }
 
