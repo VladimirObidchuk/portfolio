@@ -9,7 +9,7 @@
   color: var(--common-text-color);
   padding-bottom: 32px;
 }
-.ac {
+#faq-accordion .ac {
   padding-top: 20px;
 }
 #faq-accordion #ac-3,
@@ -98,7 +98,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .ac {
+  #faq-accordion .ac {
     padding-top: 32px;
   }
   #faq-accordion #ac-0,

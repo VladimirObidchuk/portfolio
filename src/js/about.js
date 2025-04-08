@@ -4,7 +4,6 @@ import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import '../css/about.css';
 
 export default function about() {
   new Accordion('.js-accordion', {
@@ -20,12 +19,11 @@ export default function about() {
     },
   });
 
-  const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: false,
-    spaceBetween: 0,
+  const swiper = new Swiper('.about-swiper', {
+    loop: true,
+    spaceBetween: 1,
     navigation: {
-      nextEl: '.swiper-button-next',
+      nextEl: '.about-swiper-btn',
     },
     keyboard: {
       enabled: true,
@@ -36,24 +34,20 @@ export default function about() {
       enabled: true,
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
+      1440: {
+        slidesPerView: 6,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 1,
       },
       375: {
         slidesPerView: 2,
       },
-      768: {
-        slidesPerView: 3,
-      },
-      1440: {
-        slidesPerView: 6,
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 1,
       },
     },
   });
-
-  document
-    .querySelector('.swiper-button-next')
-    .addEventListener('click', function () {
-      swiper.slideNext();
-    });
 }

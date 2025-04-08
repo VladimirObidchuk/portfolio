@@ -18,10 +18,9 @@ getAllReviews()
     refs.reviewContainer.insertAdjacentHTML('beforeend', reviewsRender(data));
     console.log(data);
 
-    // const reviewsSwiper = 
+    // const reviewsSwiper =
     new Swiper('.swiper-review', {
       spaceBetween: 16,
-      // autoHeight: false,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -44,8 +43,6 @@ getAllReviews()
   })
 
   .catch(error => {
-
-   
     refs.reviewContainer.insertAdjacentHTML('beforeend', emptyRender());
     // emptyRender();
 
