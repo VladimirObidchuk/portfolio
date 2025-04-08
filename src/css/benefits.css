@@ -1,14 +1,10 @@
+.benefits {
+  padding-top: 64px;
+}
 .benefits-container {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 0 0 64px;
-}
-
-@media (min-width: 768px) {
-  .benefits-container {
-    padding: 0 0 96px;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -16,7 +12,6 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 0 164px;
   }
 }
 
@@ -28,7 +23,6 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   flex-shrink: 0;
-  width: 50%;
 }
 
 .benefits-content {

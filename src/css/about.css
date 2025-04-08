@@ -1,6 +1,5 @@
 .about {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 64px;
 }
 
 .about-description {
@@ -58,6 +57,7 @@
   color: #fafafa;
   padding: 0;
   padding-right: 65px;
+  text-transform: uppercase;
 }
 
 .about-accordion .ac-panel .ac-text {
@@ -111,7 +111,7 @@
 }
 
 .about-slide {
-  width: 130px !important;
+  width: 130px;
   height: 130px;
   border: 1px rgba(250, 250, 250, 0.2) solid;
   border-radius: 100%;
@@ -171,14 +171,15 @@
   }
 
   .about-accordion .ac .ac-trigger::after {
-    width: 40px;
-    height: 40px;
+    width: 18px;
+    height: 18px;
+    padding: 10px;
   }
 
   .about-container {
     max-width: 768px;
   }
-
+}
 @media only screen and (min-width: 1440px) {
   .about {
     padding-top: 48px;
