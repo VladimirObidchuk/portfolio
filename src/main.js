@@ -28,7 +28,7 @@ getAllReviews()
       },
       keyboard: {
         enabled: true,
-        onlyInViewport: true,
+        onlyInViewport: false,
       },
       breakpoints: {
         1440: {
