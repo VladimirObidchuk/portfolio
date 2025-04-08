@@ -1,6 +1,7 @@
 .benefits {
-  padding-top: 64px;
+  padding: 64px 0;
 }
+
 .benefits-container {
   display: flex;
   flex-direction: column;
@@ -34,6 +35,10 @@
 }
 
 @media (min-width: 768px) {
+  .benefits {
+    padding: 96px 0;
+  }
+
   .benefits-content {
     gap: 64px;
   }
@@ -41,15 +46,10 @@
 
 @media (min-width: 1440px) {
   .benefits {
-    padding-top: 96px;
+    padding: 164px 0;
   }
   .benefits-content {
     width: 50%;
-  }
-
-  .benefits-title {
-    flex-basis: 50%;
-    margin-right: auto;
   }
 }
 
@@ -77,7 +77,6 @@
   transition: transform 250ms ease;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   outline: none;
   cursor: default;
 }
@@ -106,6 +105,7 @@
   height: 48px;
   background-color: var(--common-bg-btn-color);
   border-radius: 10px;
+  margin-bottom: 64px;
 }
 
 /* Заголовок */
@@ -113,6 +113,7 @@
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.02em;
+  margin-bottom: 8px;
 }
 
 /* Опис */
