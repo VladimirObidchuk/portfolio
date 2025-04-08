@@ -1,6 +1,9 @@
 // import Swiper from 'swiper';
 import 'swiper/css';
 import Swiper from 'swiper/bundle';
+//import iziToast
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 import refs from './service/refs.js';
 import faq from './js/faq';
@@ -42,15 +45,24 @@ getAllReviews()
 
   .catch(error => {
     refs.reviewContainer.insertAdjacentHTML('beforeend', emptyRender());
-    // emptyRender();
+    emptyRender();
 
     const scrollHandler = function () {
       const rect = refs.reviewContainer.getBoundingClientRect();
 
-      // Если верхняя часть секции видна на экране (появляется в области видимости)
+      if (!refs.reviewContainer) {
+        console.error('reviewContainer не знайдено');
+        return;
+      }
+
       if (rect.top >= 0 && rect.top <= window.innerHeight) {
-        // здесь должно быть что-то типа Toaster
         console.log('Error:', error.message);
+        iziToast.error({
+          position: 'bottomRight',
+          timeout: 4000,
+          title: 'Error',
+          message: `${error.message}`,
+        });
 
         // Снимаем слушатель после того, как он сработал
         window.removeEventListener('scroll', scrollHandler);
@@ -68,7 +80,12 @@ async function addReview(e) {
     const newReview = [emailData, commentData]; // створюємо масив даних з input
     const addNewReview = await setReview(newReview);
   } catch (error) {
-    console.log(error.message);
+    iziToast.error({
+      position: 'bottomRight',
+      timeout: 4000,
+      title: 'Error',
+      message: `${error.message}`,
+    });
   }
 }
 //-------------------------------------//
