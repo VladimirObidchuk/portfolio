@@ -5,11 +5,17 @@ const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 function showModal() {
   refs.modalBackdrop.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
+  refs.emailInput.addEventListener('input', validateEmail);
+  refs.comment.addEventListener('input', validateComment);
+  console.log('Email input event listener added');
 }
 
 function closeModal() {
   refs.modalBackdrop.classList.add('hidden');
   document.body.style.overflow = '';
+  refs.emailInput.removeEventListener('input', validateEmail);
+  refs.comment.removeEventListener('input', validateComment);
+  console.log('Email input event listener remove');
 }
 
 refs.modalCloseBtn.addEventListener('click', closeModal);
@@ -24,7 +30,8 @@ document.addEventListener('keydown', e => {
 function validateEmail() {
   const email = refs.emailInput.value.trim();
   const emailMessage = document.getElementById('email-message');
-
+  emailMessage.classList.remove('success-message', 'error-message');
+  refs.emailInput.classList.remove('valid-input', 'invalid-input');
   if (!emailPattern.test(email)) {
     emailMessage.textContent = 'Invalid email, try again';
     emailMessage.classList.add('error-message');
@@ -42,7 +49,8 @@ function validateEmail() {
 function validateComment() {
   const comment = refs.comment.value.trim();
   const commentMessage = document.getElementById('comment-message');
-
+  commentMessage.classList.remove('success-message', 'error-message');
+  refs.comment.classList.remove('valid-input', 'invalid-input');
   if (comment === '') {
     commentMessage.textContent = 'Comment cannot be empty';
     commentMessage.classList.add('error-message');
