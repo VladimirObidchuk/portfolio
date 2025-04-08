@@ -4,11 +4,13 @@ import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import refs from '../service/refs';
 
 export default function about() {
-  new Accordion('.js-accordion', {
+  const aboutAcc = new Accordion('.js-accordion', {
     duration: 300,
     showMultiple: false,
+
     onOpen: item => {
       const icon = item.querySelector('.ac-trigger');
       if (icon) icon.classList.add('rotate-180');
@@ -18,7 +20,9 @@ export default function about() {
       if (icon) icon.classList.remove('rotate-180');
     },
   });
-
+  aboutAcc.open(0);
+  //   const firstItemAcc = refs.firstAccItem;
+  //   if (firstItemAcc) firstItemAcc.classList.add('is-active');
   new Swiper('.about-swiper', {
     loop: true,
     spaceBetween: 1,

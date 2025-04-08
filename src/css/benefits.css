@@ -34,6 +34,9 @@
 }
 
 @media (min-width: 768px) {
+  .benefits {
+    padding-top: 96px;
+  }
   .benefits-content {
     gap: 64px;
   }
@@ -41,15 +44,10 @@
 
 @media (min-width: 1440px) {
   .benefits {
-    padding-top: 96px;
+    padding-top: 164px;
   }
   .benefits-content {
     width: 50%;
-  }
-
-  .benefits-title {
-    flex-basis: 50%;
-    margin-right: auto;
   }
 }
 
@@ -77,7 +75,6 @@
   transition: transform 250ms ease;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   outline: none;
   cursor: default;
 }
@@ -106,6 +103,7 @@
   height: 48px;
   background-color: var(--common-bg-btn-color);
   border-radius: 10px;
+  margin-bottom: 64px;
 }
 
 /* Заголовок */
@@ -113,6 +111,7 @@
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.02em;
+  margin-bottom: 8px;
 }
 
 /* Опис */

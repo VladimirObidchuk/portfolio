@@ -2,7 +2,12 @@
   <div class="container">
     <div class="header-nav">
       <a class="nav-logo" href="{=$home-path}" aria-label="Site logo">
-        <img class="nav-logo-png" src="{=$img-path}" alt="developer man" />
+        <img
+          class="nav-logo-png"
+          src="{=$img-path}logo.png"
+          srcset="{=$img-path}logo.png 1x, {=$img-path}logo@2x.png 2x"
+          alt="developer man"
+        />
         <span class="logo-text">jefferson*</span>
       </a>
       <div class="box-navigation">
@@ -45,19 +50,19 @@
     <nav class="burger-nav">
       <ul class="burger-list">
         <li class="burger-item">
-          <a class="burger-nav-link" href="#">About me</a>
+          <a class="burger-nav-link" href="#about">About me</a>
         </li>
         <li class="burger-item">
-          <a class="burger-nav-link" href="#">Benefits</a>
+          <a class="burger-nav-link" href="#benefits">Benefits</a>
         </li>
         <li class="burger-item">
-          <a class="burger-nav-link" href="#">Projects</a>
+          <a class="burger-nav-link" href="#project">Projects</a>
         </li>
         <li class="burger-item">
-          <a class="burger-nav-link" href="#">FAQ</a>
+          <a class="burger-nav-link" href="#faq">FAQ</a>
         </li>
       </ul>
     </nav>
-    <a class="burger-btn-link" href="#">Order the project</a>
+    <a class="burger-btn-link" href="#work">Order the project</a>
   </div>
 </div>

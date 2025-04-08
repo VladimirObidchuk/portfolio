@@ -8,6 +8,7 @@ refs.choiceSectionMenu.forEach(link => {
 });
 function toggleModal() {
   refs.modal.classList.toggle('is-open');
+  refs.body.classList.toggle('no-scroll');
 
   if (refs.modal.classList.contains('is-open')) {
     document.addEventListener('keydown', handleEscPress);
