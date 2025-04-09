@@ -110,5 +110,9 @@ export function getValidatedFormData() {
 
   if (hasError) return null;
   showModal();
+  emailMsg.textContent = '';
+  commentMsg.textContent = '';
+  refs.emailInput.classList.remove('valid-input', 'invalid-input');
+  refs.comment.classList.remove('valid-input', 'invalid-input');
   return { email, comment };
 }
