@@ -20,17 +20,17 @@ getAllReviews()
   .then(data => {
     refs.reviewContainer.insertAdjacentHTML('beforeend', reviewsRender(data));
     new Swiper('.swiper-review', {
-      loop: false,
       spaceBetween: 16,
-      centeredSlides: false,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      mousewheel: true,
       keyboard: {
         enabled: true,
-        onlyInViewport: false,
+        onlyInViewport: true,
       },
+
       breakpoints: {
         1440: {
           slidesPerView: 4,

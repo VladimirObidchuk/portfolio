@@ -7,13 +7,12 @@ import 'swiper/css/keyboard';
 
 export default function project() {
   new Swiper('.project-swiper', {
-    modules: [Navigation, Keyboard, Mousewheel],
     loop: false,
-    centeredSlides: false,
-    // slidesPerView: 1,
-    // slidesPerGroup: 1,
-    spaceBetween: 20,
-    // autoHeight: true,
+
+    centeredSlides: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    autoHeight: true,
 
     mousewheel: true,
 
