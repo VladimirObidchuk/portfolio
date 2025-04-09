@@ -89,13 +89,6 @@ async function addReview(e) {
     const newReview = { email, comment };
     const response = await setReview(newReview);
 
-    iziToast.success({
-      position: 'bottomRight',
-      timeout: 3000,
-      title: 'Success',
-      message: 'Review sent successfully!',
-    });
-
     refs.form.reset();
   } catch (error) {
     iziToast.error({

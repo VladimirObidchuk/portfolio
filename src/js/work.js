@@ -109,6 +109,6 @@ export function getValidatedFormData() {
   }
 
   if (hasError) return null;
-
+  showModal();
   return { email, comment };
 }
