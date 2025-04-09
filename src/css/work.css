@@ -1,7 +1,6 @@
 .work {
   padding: 32px 0 32px;
   position: relative;
-  /* background-image: url(/src/img/work/Glass\ effect\ 2.png); */
 }
 .work-hero {
   display: flex;
@@ -125,6 +124,14 @@
     padding-top: 80px;
     position: relative;
     display: flex;
+    background: url('../img/work/glass-effect-2.png') no-repeat 100%;
+    background-size: 30%;
+    background-position: right;
+  }
+  @media screen and (min-resolution: 192dpi) {
+    .hero {
+      background: url('../img/work/glass-effect-2@2x.png');
+    }
   }
   .work-hero {
     max-width: 542px;
@@ -280,9 +287,9 @@
 }
 
 .form-input:-webkit-autofill {
-  box-shadow: 0 0 0px 1000px transparent inset !important;
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-  -webkit-text-fill-color: var(--common-color) !important;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: var(--common-color);
   transition: background-color 5000s ease-in-out 0s;
 }
 
