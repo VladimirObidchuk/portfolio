@@ -160,6 +160,9 @@
   #faq-accordion #ac-1 {
     border-top-width: 0;
   }
+  #faq-accordion #ac-4 {
+    border: none;
+  }
   #faq-accordion #ac-4 #ac-trigger-4,
   #faq-accordion #ac-4 #ac-panel-4 #ac-text-1,
   #faq-accordion #ac-6 #ac-trigger-6,
