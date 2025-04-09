@@ -124,9 +124,9 @@
     padding-top: 80px;
     position: relative;
     display: flex;
-    background: url('../img/work/glass-effect-2.png') no-repeat 100%;
-    background-size: 30%;
-    background-position: right;
+    background: url('../img/work/glass-effect-2.png') no-repeat;
+    background-size: 32%;
+    background-position-x: right;
   }
   @media screen and (min-resolution: 192dpi) {
     .hero {
