@@ -11,7 +11,7 @@ import about from './js/about.js';
 import './js/modalmobile.js';
 import './js/header.js';
 import project from './js/project.js';
-import { getValidatedFormData } from './js/work.js';
+import { getValidatedFormData, initLiveValidation } from './js/work.js';
 import { getAllReviews, setReview } from './js/reviewe-api.js';
 import { reviewsRender, emptyRender } from './js/reviews.js';
 
@@ -88,8 +88,15 @@ async function addReview(e) {
   try {
     const newReview = { email, comment };
     const response = await setReview(newReview);
-
     refs.form.reset();
+    // Очистити повідомлення і стилі після успіху
+    refs.emailMsg.textContent = '';
+    refs.commentMsg.textContent = '';
+    refs.emailMsg.className = 'input-message';
+    refs.commentMsg.className = 'input-message';
+    refs.emailInput.classList.remove('valid-input', 'invalid-input');
+    refs.comment.classList.remove('valid-input', 'invalid-input');
+    initLiveValidation();
   } catch (error) {
     iziToast.error({
       position: 'bottomRight',
@@ -99,8 +106,9 @@ async function addReview(e) {
     });
   }
 }
-//-------------------------------------//
 refs.form.addEventListener('submit', addReview);
+//-------------------------------------//
+
 about();
 project();
 

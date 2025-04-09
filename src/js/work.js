@@ -5,8 +5,7 @@ const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 function showModal() {
   refs.modalBackdrop.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
-  refs.emailInput.addEventListener('input', validateEmail);
-  refs.comment.addEventListener('input', validateComment);
+  initLiveValidation();
   document.addEventListener('keydown', handleEscapeKey);
   console.log('Email input event listener added');
 }
@@ -14,8 +13,7 @@ function showModal() {
 function closeModal() {
   refs.modalBackdrop.classList.add('hidden');
   document.body.style.overflow = '';
-  refs.emailInput.removeEventListener('input', validateEmail);
-  refs.comment.removeEventListener('input', validateComment);
+  initLiveValidation();
   document.removeEventListener('keydown', handleEscapeKey);
   console.log('Email input event listener remove');
 }
@@ -66,9 +64,12 @@ function validateComment() {
 }
 
 // Валидация в реальном времени
-refs.emailInput.addEventListener('input', validateEmail);
-refs.comment.addEventListener('input', validateComment);
 
+export function initLiveValidation() {
+  refs.emailInput.addEventListener('input', validateEmail);
+  refs.comment.addEventListener('input', validateComment);
+}
+initLiveValidation();
 export function getValidatedFormData() {
   const email = refs.emailInput.value.trim();
   const comment = refs.comment.value.trim();
@@ -110,9 +111,6 @@ export function getValidatedFormData() {
 
   if (hasError) return null;
   showModal();
-  emailMsg.textContent = '';
-  commentMsg.textContent = '';
-  refs.emailInput.classList.remove('valid-input', 'invalid-input');
-  refs.comment.classList.remove('valid-input', 'invalid-input');
+
   return { email, comment };
 }
