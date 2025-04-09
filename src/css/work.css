@@ -129,7 +129,7 @@
     background-position-x: right;
   }
   @media screen and (min-resolution: 192dpi) {
-    .hero {
+    .work {
       background: url('../img/work/glass-effect-2@2x.png');
     }
   }
