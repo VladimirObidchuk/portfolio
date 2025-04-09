@@ -7,20 +7,17 @@ export async function getAllReviews() {
   } catch (error) {
     console.error('Error:', error.status);
     throw error;
-    // return error.status;
   }
 }
 
 export async function setReview(data) {
   try {
-    const addReview = await apiInstance('/request', {
-      // data - це маси
-      email: data[0],
-      comment: data[1],
+    const response = await apiInstance.post('/requests', {
+      email: data.email,
+      comment: data.comment,
     });
-    return addReview.data;
+    return response.data;
   } catch (error) {
-    console.error('Error:', error.status);
-    return error.status;
+    throw new Error(error);
   }
 }

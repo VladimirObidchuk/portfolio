@@ -7,6 +7,7 @@ function showModal() {
   document.body.style.overflow = 'hidden';
   refs.emailInput.addEventListener('input', validateEmail);
   refs.comment.addEventListener('input', validateComment);
+  document.addEventListener('keydown', handleEscapeKey);
   console.log('Email input event listener added');
 }
 
@@ -15,15 +16,15 @@ function closeModal() {
   document.body.style.overflow = '';
   refs.emailInput.removeEventListener('input', validateEmail);
   refs.comment.removeEventListener('input', validateComment);
+  document.removeEventListener('keydown', handleEscapeKey);
   console.log('Email input event listener remove');
 }
-
+function handleEscapeKey(e) {
+  if (e.key === 'Escape') closeModal();
+}
 refs.modalCloseBtn.addEventListener('click', closeModal);
 refs.modalBackdrop.addEventListener('click', e => {
   if (e.target === refs.modalBackdrop) closeModal();
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
 });
 
 // Функция для валидации email
@@ -68,20 +69,20 @@ function validateComment() {
 refs.emailInput.addEventListener('input', validateEmail);
 refs.comment.addEventListener('input', validateComment);
 
-refs.form.addEventListener('submit', async e => {
-  e.preventDefault();
+export function getValidatedFormData() {
   const email = refs.emailInput.value.trim();
   const comment = refs.comment.value.trim();
 
-  const emailMsg = document.getElementById('email-message');
-  const commentMsg = document.getElementById('comment-message');
+  const emailMsg = refs.emailMsg;
+  const commentMsg = refs.commentMsg;
 
-  refs.emailInput.classList.remove('valid-input', 'invalid-input');
-  refs.comment.classList.remove('valid-input', 'invalid-input');
   emailMsg.textContent = '';
   commentMsg.textContent = '';
   emailMsg.className = 'input-message';
   commentMsg.className = 'input-message';
+
+  refs.emailInput.classList.remove('valid-input', 'invalid-input');
+  refs.comment.classList.remove('valid-input', 'invalid-input');
 
   let hasError = false;
 
@@ -107,25 +108,7 @@ refs.form.addEventListener('submit', async e => {
     refs.comment.classList.add('valid-input');
   }
 
-  if (hasError) return;
+  if (hasError) return null;
 
-  try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, comment }),
-    });
-
-    if (!response.ok) throw new Error('Failed request');
-    showModal();
-
-    refs.emailInput.value = '';
-    refs.comment.value = '';
-    refs.emailInput.classList.remove('valid-input', 'invalid-input');
-    refs.comment.classList.remove('valid-input', 'invalid-input');
-    document.getElementById('email-message').textContent = '';
-    document.getElementById('comment-message').textContent = '';
-  } catch (error) {
-    alert('Something went wrong. Please check your info and try again.');
-  }
-});
+  return { email, comment };
+}

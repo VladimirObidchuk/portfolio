@@ -10,8 +10,8 @@ import faq from './js/faq';
 import about from './js/about.js';
 import './js/modalmobile.js';
 import './js/header.js';
-import './js/project.js';
-import './js/work.js';
+import project from './js/project.js';
+import { getValidatedFormData } from './js/work.js';
 import { getAllReviews, setReview } from './js/reviewe-api.js';
 import { reviewsRender, emptyRender } from './js/reviews.js';
 
@@ -19,9 +19,10 @@ import { reviewsRender, emptyRender } from './js/reviews.js';
 getAllReviews()
   .then(data => {
     refs.reviewContainer.insertAdjacentHTML('beforeend', reviewsRender(data));
-    // const reviewsSwiper =
     new Swiper('.swiper-review', {
+      loop: false,
       spaceBetween: 16,
+      centeredSlides: false,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -66,8 +67,6 @@ getAllReviews()
           title: 'Error',
           message: `${error.message}`,
         });
-
-        // Снимаем слушатель после того, как он сработал
         window.removeEventListener('scroll', scrollHandler);
       }
     };
@@ -79,9 +78,25 @@ getAllReviews()
 //-----------------Add new review--------------------//
 async function addReview(e) {
   e.preventDefault();
+
+  const formData = getValidatedFormData();
+
+  if (!formData) return; // Якщо помилка — нічого не надсилаємо
+
+  const { email, comment } = formData;
+
   try {
-    const newReview = [emailData, commentData]; // створюємо масив даних з input
-    const addNewReview = await setReview(newReview);
+    const newReview = { email, comment };
+    const response = await setReview(newReview);
+
+    iziToast.success({
+      position: 'bottomRight',
+      timeout: 3000,
+      title: 'Success',
+      message: 'Review sent successfully!',
+    });
+
+    refs.form.reset();
   } catch (error) {
     iziToast.error({
       position: 'bottomRight',
@@ -92,7 +107,8 @@ async function addReview(e) {
   }
 }
 //-------------------------------------//
-
+refs.form.addEventListener('submit', addReview);
 about();
+project();
 
 faq();

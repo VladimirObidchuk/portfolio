@@ -4,7 +4,6 @@ import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import refs from '../service/refs';
 
 export default function about() {
   const aboutAcc = new Accordion('.js-accordion', {
@@ -21,11 +20,10 @@ export default function about() {
     },
   });
   aboutAcc.open(0);
-  //   const firstItemAcc = refs.firstAccItem;
-  //   if (firstItemAcc) firstItemAcc.classList.add('is-active');
-  new Swiper('.about-swiper', {
+  const aboutSwiper = new Swiper('.about-swiper', {
     loop: true,
-    spaceBetween: 1,
+    spaceBetween: 0,
+    centeredSlides: false,
     navigation: {
       nextEl: '.about-swiper-btn',
     },
@@ -34,9 +32,9 @@ export default function about() {
       onlyInViewport: true,
     },
     mousewheel: true,
-    a11y: {
-      enabled: true,
-    },
+    // a11y: {
+    //   enabled: true,
+    // },
     breakpoints: {
       1440: {
         slidesPerView: 6,

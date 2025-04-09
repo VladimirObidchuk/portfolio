@@ -5,24 +5,26 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/keyboard';
 
-const projSwiper = new Swiper('.project-swiper', {
-  modules: [Navigation, Keyboard, Mousewheel],
-  loop: false,
+export default function project() {
+  new Swiper('.project-swiper', {
+    modules: [Navigation, Keyboard, Mousewheel],
+    loop: false,
+    centeredSlides: false,
+    // slidesPerView: 1,
+    // slidesPerGroup: 1,
+    spaceBetween: 20,
+    // autoHeight: true,
 
-  centeredSlides: true,
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-  autoHeight: true,
+    mousewheel: true,
 
-  mousewheel: true,
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-  simulateTouch: true,
-  navigation: {
-    nextEl: '.custom-next',
-    prevEl: '.custom-prev',
-  },
-});
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    simulateTouch: true,
+    navigation: {
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev',
+    },
+  });
+}

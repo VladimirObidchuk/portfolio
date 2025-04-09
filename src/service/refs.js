@@ -23,5 +23,7 @@ const refs = {
   modalBackdrop: document.getElementById('modalBackdrop'),
   modalCloseBtn: document.getElementById('modalCloseBtn'),
   comment: document.getElementById('comment'),
+  emailMsg: document.getElementById('email-message'),
+  commentMsg: document.getElementById('comment-message'),
 };
 export default refs;
