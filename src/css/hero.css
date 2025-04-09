@@ -54,10 +54,6 @@
   display: flex;
 }
 
-.hero-social-link-item.contact-email.hero-social-link-item-text {
-  padding: 10px 12px;
-}
-
 .hero-social-link-item-text {
   padding: 10px;
   border: 1px solid var(--common-border-hover);
@@ -69,6 +65,9 @@
   color: var(--common-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-email {
+  padding: 10px 12px;
 }
 @media only screen and (min-width: 375px) {
   .hero-social-link-item-text {
@@ -86,6 +85,12 @@
       background-image: url('../img/hero/bg-hero-tablet@2x.png');
     }
   }
+  .hero-social-link-item-text {
+    padding: 18px;
+  }
+  .contact-email {
+    padding: 18px 24px;
+  }
 
   .hero-social-links {
     gap: 8px;
@@ -95,9 +100,7 @@
   .hero-social-link-item-text:hover {
     border-color: var(--common-color);
   }
-  .hero-social-link-item-text {
-    padding: 18px 20px;
-  }
+
   .hero-social-link-item-text {
     font-size: 16px;
   }

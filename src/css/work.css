@@ -126,13 +126,13 @@
   .work {
     position: relative;
     display: flex;
-    background: url('../img/work/glass-effect-2.png') no-repeat;
+    background: url('../img/work/bgrwork.webp') no-repeat;
     background-size: 32%;
     background-position-x: right;
   }
   @media screen and (min-resolution: 192dpi) {
     .work {
-      background: url('../img/work/glass-effect-2@2x.png');
+      background: url('../img/work/bgrwork@2x.webp');
     }
   }
   .work-hero {
