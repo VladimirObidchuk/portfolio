@@ -10,7 +10,7 @@
   height: 100vh;
   height: -moz-available;
   height: -webkit-fill-available;
-  background: url('../img/bg-line-cover.png') left top no-repeat;
+  background: url('../img/covers/bg-line-cover.webp') left top no-repeat;
   background-size: contain;
   position: absolute;
   right: -800px;

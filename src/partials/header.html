@@ -4,9 +4,11 @@
       <a class="nav-logo" href="{=$home-path}" aria-label="Site logo">
         <img
           class="nav-logo-png"
-          src="{=$img-path}logo.png"
-          srcset="{=$img-path}logo.png 1x, {=$img-path}logo@2x.png 2x"
+          src="{=$img-path}logo.webp"
+          srcset="{=$img-path}logo.webp 1x, {=$img-path}logo@2x.webp 2x"
           alt="developer man"
+          width="80"
+          height="80"
         />
         <span class="logo-text">jefferson*</span>
       </a>
@@ -29,7 +31,12 @@
       </div>
 
       <a class="header-link link-btn" href="#work">Order the project</a>
-      <button class="burger-btn" type="button" data-modal-open>
+      <button
+        class="burger-btn"
+        type="button"
+        aria-label="open moda window"
+        data-modal-open
+      >
         <svg class="burger-btn-icon" width="28" height="28">
           <use href="{=$icon-path}#icon-burger"></use>
         </svg>
