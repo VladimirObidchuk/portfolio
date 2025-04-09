@@ -93,8 +93,7 @@
     justify-content: flex-end;
   }
   .hero-social-link-item-text:hover {
-    color: var(--common-bg-btn-color-hover);
-    border-color: var(--common-bg-btn-color-hover);
+    border-color: var(--common-color);
   }
   .hero-social-link-item-text {
     padding: 18px 20px;

@@ -118,6 +118,9 @@
   .work-address-link {
     padding: 18px 32px;
   }
+  .send-button:hover {
+    background-color: var(--common-bg-btn-color-hover);
+  }
 }
 @media only screen and (min-width: 1440px) {
   .work {
