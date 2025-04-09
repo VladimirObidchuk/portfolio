@@ -1,9 +1,11 @@
 .project {
   padding-top: 64px;
 }
+
 .project-item {
   width: 100%;
 }
+
 .project-title {
   font-weight: 600;
   font-size: 16px;
@@ -56,11 +58,12 @@
   line-height: 1.16667;
   letter-spacing: -0.03em;
   color: var(--common-bg);
-  margin-bottom: 45px;
+  margin-bottom: 32px;
   max-width: 279px;
   width: 100%;
 }
 .project-link {
+  display: inline-block;
   letter-spacing: -0.02em;
   color: var(--common-color);
   border-radius: 60px;
@@ -100,7 +103,6 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
-  margin-top: 32px;
 
   border: 1px solid var(--common-border-color);
   border-radius: 60px;
@@ -150,6 +152,9 @@
 @media only screen and (min-width: 1440px) {
   .project {
     padding-top: 96px;
+  }
+  .skill-text-block {
+    margin-bottom: 223px;
   }
   .project-desc {
     display: flex;

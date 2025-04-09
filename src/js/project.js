@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 import 'swiper/css';
