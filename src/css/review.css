@@ -148,7 +148,10 @@
   cursor: pointer;
   background-color: inherit;
 }
-
+#review .swiper-button-prev-review:focus,
+#review .swiper-button-next-review:focus {
+  outline: none;
+}
 #review .swiper-button-disabled {
   border: 1px solid var(--common-border-hover);
 }
