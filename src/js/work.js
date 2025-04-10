@@ -2,7 +2,7 @@ import refs from '../service/refs';
 
 const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
-function showModal() {
+export function showModal() {
   refs.modalBackdrop.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
   initLiveValidation();
@@ -110,7 +110,6 @@ export function getValidatedFormData() {
   }
 
   if (hasError) return null;
-  showModal();
 
   return { email, comment };
 }
