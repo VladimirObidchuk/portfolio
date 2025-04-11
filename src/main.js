@@ -108,6 +108,7 @@ async function addReview(e) {
       title: 'Error',
       message: `${error.message}`,
     });
+    console.log(error.message);
   }
 }
 refs.form.addEventListener('submit', addReview);
