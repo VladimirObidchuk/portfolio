@@ -257,47 +257,82 @@
       <div
         id="about-swiper"
         class="swiper about-swiper"
-        role="region"
-        aria-label="Слайдер навичок"
+        aria-label="Skills slider"
       >
-        <ul class="swiper-wrapper about-wrapper">
-          <li class="swiper-slide about-slide">
+        <ul class="swiper-wrapper about-wrapper" aria-live="polite">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="HTML/CSS"
+          >
             <p class="skill-item">HTML/CSS</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="JavaScript"
+          >
             <p class="skill-item">JavaScript</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="React"
+          >
             <p class="skill-item">React</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="Node.js"
+          >
             <p class="skill-item">Node.js</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="React native"
+          >
             <p class="skill-item">React native</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="Soft skills"
+          >
             <p class="skill-item">Soft skills</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="React"
+          >
             <p class="skill-item">React</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="Node.js"
+          >
             <p class="skill-item">Node.js</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="React native"
+          >
             <p class="skill-item">React native</p>
           </li>
-          <li class="swiper-slide about-slide">
+          <li
+            class="swiper-slide about-slide"
+            role="listitem"
+            aria-label="Soft skills"
+          >
             <p class="skill-item">Soft skills</p>
           </li>
         </ul>
       </div>
-      <button
-        class="about-swiper-btn"
-        type="button"
-        aria-label="Наступний слайд"
-      >
+      <button class="about-swiper-btn" type="button" aria-label="Next skill">
         <svg class="icon-about-next" width="28" height="28">
           <use href="/portfolio/assets/icon-B3VCufUv.svg#icon-arrow-narrow-right"></use>
         </svg>
@@ -368,16 +403,32 @@
       <section id="project" class="project">
   <div class="container">
     <h2 class="project-title">Projects</h2>
-    <div class="project-swiper swiper">
-      <ul class="project-list swiper-wrapper">
-        <li class="project-item swiper-slide">
+    <div
+      class="project-swiper swiper"
+      role="region"
+      aria-labelledby="project-swiper-title"
+    >
+      <ul class="project-list swiper-wrapper" aria-live="polite">
+        <li
+          class="project-item swiper-slide"
+          role="listitem"
+          aria-label="Slide 1: Library ap"
+        >
           <div class="project-desc">
             <div class="project-information">
-              <ul class="skill-text-block">
-                <li><p class="skill-text">#react</p></li>
-                <li><p class="skill-text">#js</p></li>
-                <li><p class="skill-text">#node js</p></li>
-                <li><p class="skill-text">#git</p></li>
+              <ul class="skill-text-block" aria-live="polite">
+                <li role="listitem" aria-label="React">
+                  <p class="skill-text">#react</p>
+                </li>
+                <li role="listitem" aria-label="JavaScript">
+                  <p class="skill-text">#js</p>
+                </li>
+                <li role="listitem" aria-label="Node JS">
+                  <p class="skill-text">#node js</p>
+                </li>
+                <li role="listitem" aria-label="Git Hube">
+                  <p class="skill-text">#git</p>
+                </li>
               </ul>
               <p class="project-description-text">
                 Programming Across Borders: Ideas, Technologies, Innovations
@@ -412,14 +463,26 @@
           </div>
         </li>
 
-        <li class="project-item swiper-slide">
+        <li
+          class="project-item swiper-slide"
+          role="listitem"
+          aria-label="Slide 2: Veterinarian examining the dog"
+        >
           <div class="project-desc">
             <div class="project-information">
-              <ul class="skill-text-block">
-                <li><p class="skill-text">#react</p></li>
-                <li><p class="skill-text">#js</p></li>
-                <li><p class="skill-text">#node js</p></li>
-                <li><p class="skill-text">#git</p></li>
+              <ul class="skill-text-block" aria-live="polite">
+                <li role="listitem" aria-label="React">
+                  <p class="skill-text">#react</p>
+                </li>
+                <li role="listitem" aria-label="JavaScript">
+                  <p class="skill-text">#js</p>
+                </li>
+                <li role="listitem" aria-label="Node JS">
+                  <p class="skill-text">#node js</p>
+                </li>
+                <li role="listitem" aria-label="Git Hube">
+                  <p class="skill-text">#git</p>
+                </li>
               </ul>
               <p class="project-description-text">
                 Programming Across Borders: Ideas, Technologies, Innovations
@@ -454,14 +517,26 @@
           </div>
         </li>
 
-        <li class="project-item swiper-slide">
+        <li
+          class="project-item swiper-slide"
+          role="listitem"
+          aria-label="Slide 2: Dictionary app"
+        >
           <div class="project-desc">
             <div class="project-information">
-              <ul class="skill-text-block">
-                <li><p class="skill-text">#react</p></li>
-                <li><p class="skill-text">#js</p></li>
-                <li><p class="skill-text">#node js</p></li>
-                <li><p class="skill-text">#git</p></li>
+              <ul class="skill-text-block" aria-live="polite">
+                <li role="listitem" aria-label="React">
+                  <p class="skill-text">#react</p>
+                </li>
+                <li role="listitem" aria-label="JavaScript">
+                  <p class="skill-text">#js</p>
+                </li>
+                <li role="listitem" aria-label="Node JS">
+                  <p class="skill-text">#node js</p>
+                </li>
+                <li role="listitem" aria-label="Git Hube">
+                  <p class="skill-text">#git</p>
+                </li>
               </ul>
               <p class="project-description-text">
                 Programming Across Borders: Ideas, Technologies, Innovations
